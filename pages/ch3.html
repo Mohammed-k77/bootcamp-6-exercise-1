@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../fontawesome-v6.4.2/css/all.css"> 
+    <title>Form 2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .txtlabel{
+            margin-right: 10px;
+        }
+        table{
+            margin: 10% 20% 3.5% 33%;
+        }   
+        
+        th{
+            background-color: #d98403;
+            text-align: left;
+            color: #c5cb64;
+            padding: 16px 0px 15px 25px;
+        }
+
+        td{
+            padding: 10px 23px 10px 0px;
+        }
+
+        .formLabel{
+            text-align: right;
+        }
+
+        .thFormLabel{
+            text-align: right;
+        }
+
+        .formcheck{
+            margin-right: 10px;
+        }
+        
+        .thFormInput{
+            text-align: left;
+        }
+        .fildes{
+            background-color:#222536;
+        }
+
+        .formcheckLabel{
+            color: #bfbb65;
+        }
+
+        .formLabel{
+            color: #bfbb65;
+            margin: 7px 0px 0px 20px;
+        }
+
+        .tFooter{
+            text-align: right;
+            background-color: #d98403;
+        }
+
+        .btnSubmit{
+            background-color: #5da558;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+        }
+
+        .btnCencel{
+            background-color: #d9534c;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="get" enctype="multipart/form-data">
+        <table cellspacing="0" border="0">
+            <tr>
+                <th colspan="2">
+                    Sign Up
+                </th>
+            </tr>
+            <tr class="fildes">
+                <td class="thFormLabel">
+                    <label class="formLabel">First Name</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="text" placeholder="Enter First Name">
+                </td>
+            </tr>
+            <tr class="fildes">
+                <td class="thFormLabel">
+                    <label class="formLabel">Last Name</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="text" placeholder="Enter Last Name">
+                </td>
+            </tr>
+            <tr class="fildes">
+                <td class="thFormLabel">
+                    <label class="formLabel">Date of Birth</label>
+                </td>
+                <td class="thFormInput">
+                    <select>
+                        <option disabled selected>Date</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Month</option>
+                    </select>
+                    <select>
+                        <option disabled selected>Year</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="fildes">
+                <td class="thFormLabel">
+                    <label class="formLabel">Gender</label>
+                </td>
+                <td class="thFormInput">
+                    <label class="formcheckLabel" ><input class="formcheck" type="radio" name="Gender">Male</label>
+                    <label class="formcheckLabel" ><input class="formcheck" type="radio" name="Gender">Female</label>
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td class="formLabel">
+                    <label class="formLabel">Country</label>
+                </td>
+                <td class="thFormInput">
+                    <select>
+                        <option disabled selected>Country</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td class="thFormLabel">
+                    <label class="formLabel">E-mail</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="email" placeholder="Enter E-mail"></label>
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td class="thFormLabel">
+                    <label class="formLabel">Phone</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="tel" placeholder="Enter Phone">
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td class="thFormLabel">
+                    <label class="formLabel">Password</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="password">
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td class="thformLabel">
+                    <label class="formLabel">Confirm Password</label>
+                </td>
+                <td class="thFormInput">
+                    <input class="formInput" type="password">
+                </td>
+            </tr>
+            <tr class="fildes" >
+                <td>
+                </td>
+                <td class="thFormInput">
+                    <label class="formcheckLabel"><input class="formcheck" type="checkbox">I Agree to the Terms of use</label>
+                </td>
+            </tr>                
+            </div>
+
+            <tr class="tFooter">
+                <td>
+
+                </td>
+                <td>
+                    <input class="btnSubmit" type="submit" value="Submit">
+                    <input class="btnCencel" type="button" value="Cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../fontawesome-v6.4.2/css/all.css"> 
+    <style>
+        table{
+            background-color: #FFF;
+            margin: 10% 0 0 31%;
+        }
+        
+        td{
+            background-color: #00ccff;
+            padding: 5px 10px 5px 10px;
+        }
+
+        .btn{
+            padding: 5px 15px 5px 15px;
+            cursor: pointer;
+        }
+
+        /*region Links*/
+
+        .next{
+            position: absolute;
+            top: 75%;
+            left: 20%;
+            color: #fff;
+            font-size: 40px;
+        }
+        
+        .home{
+            position: absolute;
+            top: 75%;
+            left: 15%;
+            color: #fff;
+            font-size: 40px;
+        }
+        
+        .back{
+            position: absolute;
+            top: 75%;
+            left: 10%;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        /*#endregion Links */
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+    <table border="1" cellspacing="5">
+        <th colspan="2" style="background-color: #fffeab; font-size: 20px; color: red;">Registration Form</th> 
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="Name" pattern="[\u0600-\u06FF\s]{1,10}"></td>
+        </tr>
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="password" name="Password"></td>
+        </tr>
+        <tr>
+            <td>Enter Address</td>
+            <td><textarea rows="4" name="Address"></textarea>
+            </td> 
+        </tr>
+        <tr>
+            <td>Select Gmae</td>
+            <td>
+                <div>
+                    <label><input type="checkbox" name="Games">Hockey</label>
+                </div>
+                <div>
+                    <label></label><input type="checkbox" name="Games">Football</label>
+                </div>
+                <div>
+                    <label></label><input type="checkbox" name="Games">Badminton</label>
+                </div>
+                <div>
+                    <label></label><input type="checkbox" name="Games">Cricket</label>
+                </div>
+                <div>
+                    <label></label><input type="checkbox" name="Games">Volleyball</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="Gender">
+                <label>Male</label>
+                <input type="radio" name="Gender">
+                <label>Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Delect ur age</td>
+            <td><select style="width: 115px;" name="Age">
+                <option disabled selected>Select</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td>Select Photo</td>
+            <td><input type="file" name="Photo"></td>
+        </tr>
+        <tr>
+            <td>Enter Email</td>
+            <td><input type="text" pattern="([0-9 a-z A-Z_\-\.]+)@([a-z]{8}+\.+[a-z][3])" name="Email"></td>
+        </tr>
+        <tr>
+            <td>Enter hexa Color</td>
+            <td><input type="text" pattern="[0-9 a-f A-F]{6}" name="Photo"></td>
+        </tr>
+        <tr>
+            <td>Enter Phone</td>
+            <td><input type="tel" name="Phone"></td>
+        </tr>
+        <tr>
+            <td>text</td>
+            <td><input type="text" pattern="+[a]" name="Phone"></td>
+        </tr>
+        <tr>
+            <td>
+                Enter text to searsh
+            </td>
+            <td>
+                <input type="search" id="search" name="search"
+                pattern="[^'\x22]+" title="Invalid input">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input class="btn" type="button" value="Click Me">
+                <input class="btn" type="reset" value="Reset">
+                <input class="btn" type="submit" value="Submit Form">
+            </td>           
+        </tr>
+    </table>
+    <a class="next" href="./pages/ex2.html"><i class="fa-solid fa-circle-right fa-beat-fade"></i></a>
+    <a class="next" href="./pages/ex2.html"><i class="fa-solid fa-circle-left fa-beat-fade"></i></a>
+    <a class="home" href="../index.html"><i class="fa-solid fa-house fa-beat-fade"></i></a>
+</form>
+
+<script src="../fontawesome-v6.4.2/js/all.js"></script>
+</body>
+</html>
