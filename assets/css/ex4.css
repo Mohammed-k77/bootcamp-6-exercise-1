@@ -4,20 +4,29 @@
     box-sizing: border-box;
 }
 
+.continer{
+    position: relative;
+    margin: 0 2% 0 2%;
+}
+
 .header{
     position: relative;
     width: 232px;
-    margin: 9% 11% 0 42%;
+    margin: 2% 21% 0 41%;
 }
 
-.svg-inline--fa .fa-magnifying-glass{
-    font-size: 20;
-    border-radius: 10px;
-    width: 100px;
+.iconSearsh{
+    padding: 8px 20px 14px 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: #36c;
+    display: inline;
+    height: 20px;
+    font-size: 22px;
 }
 
 .LinkContiner{
-    margin: 5% 10% 3% 10%;
+    margin: 2% 10% 3% 10%;
     position: relative;
     height: 40vh;
 }
@@ -52,16 +61,24 @@
 }
 
 .searsh{
-    margin: 4% 26% 0 35%; 
+    margin: 5% 21% 0 33%;
 }
 
 .inputSearsh{
-    width: 450px;
+    width: 400px;
     height: 45px;
     border-right: none;
     border-left: none;
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
+}
+
+.inputSearsh:active{
+    border:2px solid #36c;
+}
+
+.inputSearsh:disabled{
+    border:2px solid rgb(8, 236, 38);
 }
 
 .inputSelect{
@@ -70,3 +87,76 @@
     right: 65px;
     width: 47px;
 }
+
+.fifooter{
+    display: flex;
+    margin: 2% 31% 5% 30%;
+    justify-content: space-between;
+}
+
+.left{
+    width: 135px;
+}
+
+.left hr{
+    margin-top: 20px;
+}
+
+.center{
+    width: 260px;
+    height: 15vh;
+    border-radius: 10px;
+    border: 1px solid #36c;
+}
+
+.right{
+    width: 135px;
+}
+
+.right hr{
+    margin-top: 20px;
+}
+
+.btnselectLan{
+    width: 221px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid gray;
+}
+
+.selectLan{
+    text-align: center;
+    width: 180px;
+    direction: rtl;
+    background-color: #f8f9fa;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #36c;
+}
+
+ /*region Links*/
+ .next{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    color : red;
+    font-size: 40px;
+}
+
+.home{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    color : red;
+    font-size: 40px;
+}
+
+.back{
+position: absolute;
+top: 75%;
+left: 10%;
+color : red;
+font-size: 40px;
+}
+/*#endregion Links */
