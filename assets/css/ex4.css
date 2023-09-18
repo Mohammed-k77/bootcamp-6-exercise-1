@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    position: relative;
+    width: 232px;
+    margin: 9% 11% 0 42%;
+}
+
+.svg-inline--fa .fa-magnifying-glass{
+    font-size: 20;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.LinkContiner{
+    margin: 5% 10% 3% 10%;
+    position: relative;
+    height: 40vh;
+}
+
+.lan{
+    color: #36c;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.lanLink{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.headImage{
+    width: 270px;
+    height: 5vh;
+}
+.img{
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link{
+    position: relative;
+}
+
+.searsh{
+    margin: 4% 26% 0 35%; 
+}
+
+.inputSearsh{
+    width: 450px;
+    height: 45px;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.inputSelect{
+    position: relative;
+    top: 0px;
+    right: 65px;
+    width: 47px;
+}
