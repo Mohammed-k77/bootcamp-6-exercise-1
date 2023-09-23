@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #b182d0;
+}
+
+.headtitle{
+    color: white;
+    text-align: center;
+}
+
+.contenet{
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.navpar{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0 1% 1%;
+    margin: 0 0 0 10%;
+}
+
+.brandIcon{
+    height: 4.5vh;
+}
+
+.links{
+    width: 25%;
+}
+
+.links ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 4% 0 0 0;
+}
+
+.links ul li a{
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.searsh{
+    width: 28%;
+}
+
+.logoLink{
+    color: #df68d7;
+    font-size: 20px;
+    margin: 0 9% 0 0;
+}
+
+.btnLogIn{
+    width: 135px;
+    height: 6vh;
+    color: white;
+    background: linear-gradient(to bottom right, #df68d7, #4026a4);
+    border-radius: 15px 0 0 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnLoginIcon{
+    position: absolute;
+    font-size: 27px;
+    color: #ffffff;
+    top: 7%;
+    right: 7%;
+}
+
+.inputSearsh{
+    width: 100%;
+    height: 5vh;
+    padding: 0% 11% 0% 0;
+    background-color: #c1b3b32b;
+    border: none;
+    border-radius: 34px;
+    text-align: right;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    top: 7.6%;
+    right: 19%;
+    color: gray;
+}
+
+.portifoloi{
+    display: flex;
+    height: 82.1vh;
+    margin: 2% 0 0 0;
+    justify-content: space-between;
+}
+
+.sidelinks{
+    height: 33vh;
+    margin: 15% 0 0 0;
+    padding: 1% 0 1% 0;
+    background: linear-gradient(to bottom right, #df68d7, #4026a4);
+    border-radius: 0 12px 12px 0;
+}
+
+.sidelinks ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+
+.sidelinks ul li{
+    padding: 10px;
+}
+
+.fa-twitter,
+.fa-facebook-f,
+.fa-instagram,
+.fa-youtube{
+    font-size: 1.5rem;
+}
+
+.textAdvertise{
+    width: 40%;
+}
+
+.textAdvertise h3{
+    font-size: 2rem;
+}
+
+.textAdvertise h1{
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.textAdvertise hr{
+    width: 60%;
+    margin: 1% 0 4% 0;
+    height: 10px;
+    background-color: aqua;
+}
+
+
+#Wallet{
+    color:aqua;
+}
+
+.view{
+    width: 47%;
+}
+
+.images{
+    width: 100%;
+    background-image: url(../img/mmk.jpg);
+    height: 68vh;
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(to bottom right, #df68d7, #4026a4);
+}
+
+.manImage{
+    position: relative;
+    left: 24%;
+    top: -5.5%;
+    height: 95vh;
+    width: 75%;
+    z-index: 2;
+}
+
+.btnLeft{
+    position: absolute;
+    display: inline;
+    width: 25%;
+    padding: 0 1% 0 1%;
+    height: 12vh;
+    border-radius: 35px;
+    margin: -10% 21% 1% 13%;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 3px 13px black;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btnCenter{
+    position: absolute;
+    display: inline;
+    width: 25%;
+    padding: 0 1% 0 1%;
+    height: 12vh;
+    border-radius: 35px;
+    margin: -10% 20% 1% 41%;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 3px 13px black;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btnIcon{
+    font-size: 35px;
+    color: #8f46ba;
+}
+
+.btnRight{
+    position: absolute;
+    display: inline;
+    width: 25%;
+    padding: 0 1% 0 1%;
+    height: 12vh;
+    border-radius: 35px;
+    margin: -10% 18% 1% 69%;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 3px 13px black;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.svg[class="fa-circle"]{
+    background-color: transparent;
+}
+
+.circle1{
+    position: fixed;
+    color: white;
+    border-radius: 69px;
+    top: -2%;
+    left: -5%;
+    font-size: 8rem;
+    box-shadow: 0px 0px 25px #8f46ba;
+}
+
+.circle2{
+    position: fixed;
+    color: white;
+    border-radius: 69px;
+    top: 95%;
+    left: 0%;
+    font-size: 8rem;
+    box-shadow: 0px 0px 25px #8f46ba;
+}
+.circle3{
+    position: fixed;
+    color: white;
+    border-radius: 69px;
+    top: 28%;
+    right: 44%;
+    font-size: 5rem;
+    box-shadow: 0px 0px 25px #8f46ba;
+}
+.circle4{
+    position: fixed;
+    color: white;
+    border-radius: 230px;
+    top: 39%;
+    right: 4%;
+    font-size: 26rem;
+    box-shadow: 0px 0px 25px #8f46ba;
+}
+.circle5{
+    position: fixed;
+    color: white;
+    border-radius: 69px;
+    top: 26%;
+    right: -5%;
+    z-index: 5;
+    font-size: 6rem;
+    box-shadow: 0px 0px 25px #8f46ba;
+}
