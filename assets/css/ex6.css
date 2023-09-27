@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "mukta";
+    src: url(/assets/font/Mukta-Regular.ttf)
+}
+
+*{
+    font-family: fantasy;
+}
+
+body{
+    background-color: #202e37;
+}
+
+.tableContent{
+    margin: 2.5% 1% 1%;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    background-color: transparent;
+}
+
+table h2, table p {
+    margin: 10px 0 15px 0;
+}
+
+td{
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    cursor: pointer;
+    padding:auto;
+}
+
+.none{
+    display: none;
+}
+
+.red{
+    color: #C70039;
+    border: 4px solid #C70039;
+    transition: transform 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.red:hover ,.green:hover ,.yellow:hover,.blue:hover{
+    color: white;
+    z-index: 2;
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+.red:hover{
+    background-color: #C70039;
+    box-shadow: 2px 2px 15px #C70039;
+}
+
+
+.green{
+    color: #219C90;
+    border: 4px solid #219C90;
+    transition: transform 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.green:hover{
+    background-color: #219C90;
+    box-shadow: 2px 2px 15px #219C90;
+}
+
+.yellow{
+    color: #FCE700;
+    border: 4px solid #FCE700;
+    transition: transform 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.yellow:hover{
+    background-color: #FCE700;
+    box-shadow: 2px 2px 15px #FCE700;
+}
+
+.blue{
+    color: #22668D;
+    border: 4px solid #22668D;
+    transition: transform 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.blue:hover{
+    background-color: #22668D;
+    box-shadow: 2px 2px 15px #22668D;
+}
+
+.descriptionContiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'mukta';
+}
+
+.descriptionContiner p{
+    font-family: 'mukta';
+}
+
+.tdDescription{
+    display: flex;
+}
+
+.socialMedia,.seriousWork,.personalDevlopment,.funStuf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.socialMedia div,.seriousWork div,.personalDevlopment div,.funStuf div{
+    padding: 2%;
+    margin: 1%;
+    color: white;
+}
+
+.tableDescription{
+    display: flex;
+}
+
+.sMIcon{
+    color: #FCE700;
+}
+
+.sWIcon{
+    color: #219C90;
+}
+
+.pDIcon{
+    color: #22668D;
+}
+
+.fSIcon{
+    color: #C70039;
+}
+
+.importance , .timeSpent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+}
+
+.importance div, .timeSpent div{
+    padding: 2%;
+    margin: 1%;
+    color: white;
+}
+
+/*region Links*/
+.next{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    color : red;
+    font-size: 40px;
+}
+
+.home{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    color : red;
+    font-size: 40px;
+}
+
+.back{
+position: absolute;
+top: 75%;
+left: 10%;
+color : red;
+font-size: 40px;
+}
+/*#endregion Links */

@@ -1,0 +1,40 @@
+table{
+    background-color: #FFF;
+    margin: 10% 0 0 31%;
+}
+
+td{
+    background-color: #00ccff;
+    padding: 5px 10px 5px 10px;
+}
+
+.btn{
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+
+/*region Links*/
+ .next{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    color : red;
+    font-size: 40px;
+}
+
+.home{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    color : red;
+    font-size: 40px;
+}
+
+.back{
+position: absolute;
+top: 75%;
+left: 10%;
+color : red;
+font-size: 40px;
+}
+/*#endregion Links */

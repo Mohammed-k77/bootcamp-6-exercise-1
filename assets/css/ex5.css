@@ -282,3 +282,29 @@ body{
     font-size: 6rem;
     box-shadow: 0px 0px 25px #8f46ba;
 }
+
+/*region Links*/
+.next{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    color : red;
+    font-size: 40px;
+}
+
+.home{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    color : red;
+    font-size: 40px;
+}
+
+.back{
+position: absolute;
+top: 75%;
+left: 10%;
+color : red;
+font-size: 40px;
+}
+/*#endregion Links */
