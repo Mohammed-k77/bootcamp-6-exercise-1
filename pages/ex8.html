@@ -3,336 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/lib/fontawesome-v6.4.2/css/all.css">
+    <link rel="stylesheet" href="../assets/lib/fontawesome-v6.4.2/css/all.css">
+    <link rel="stylesheet" href="../assets/css/ex8.css">
 
     <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'mukta';
-            src: url(/assets/font/Mukta-Regular.ttf);
-        }
-        *{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-            font-weight: bold;
-        }
-
-        body{
-            margin: 0;
-        }
-
-        .continer{
-            margin: 0 ;
-        }
-
-        .headerSection{
-            background-color: #4f91cd;
-            color: white;
-            padding: 1% 0;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            text-align: center;
-        }
-
-        .headerSection ul{
-            display: flex;
-            list-style: none;
-        }
-
-        .headerSection ul li{
-            margin: 5px;
-        }
-
-        .headerSection ul li a{
-            text-decoration: none;
-            color: white;
-        }
-
-        .logoContiner h2 , .logoContiner p{
-            text-transform: uppercase;
-            font-size: 25px;
-            margin: 5px 0 12px 0;
-        }
-
-        .logoContiner img{
-            width: 100%;
-        }
-
-        .btnLink , .btnSearsh{
-            border: 1px solid lightgrey;
-            padding: 10px 20px;
-            color: white;
-            margin: 20px;
-            border-radius: 5px;
-            background-color: transparent;
-            cursor: pointer;
-        }
-        .btnLink p, .btnSearsh p{
-            display: inline;
-        }
-
-        .linksSection{
-            display: flex;
-            justify-content: space-around;
-            background-color: #043867;
-            color: white;
-            font-weight: bold;
-        }
-
-        .aboutSimmons , .academics , .admission , .student , .alhumnea{
-            padding: 10px 20px;
-            text-align: center;
-            border-left: 1px solid white;
-            border-right: 1px solid white;
-            width: 17%;
-        }
-
-        .content{
-            padding: 6% 2% 0 2%;
-        }
-
-        .lindingphoto{
-
-        }
-
-        .lindingphoto img{
-            width: 100%;
-        }
-
-        .makeYourMove{
-            background-color: #7aa120;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-
-        .smallText p{
-            padding: 5%;
-        }
-
-        .largeText {
-            width: 37%;
-            padding: 10px 20px 0 50px
-        }
-
-        .largeText h1{
-            margin: 0;
-            text-align: right;
-        }
-
-        .arrowIcon{
-            font-size: 50px;
-
-        }
-
-        .firstLine{
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .undeg , .graduate , .accele{
-            background-color: lightgray;
-            margin: 2% 0%;
-            padding: 4% 4% 3% 4%;
-            width: 22%;
-        }
-
-        .undeg h1 , .graduate h1, .accele h1{
-            color:rgb(4, 123, 163);
-        }
-
-        .undeg p, .graduate p, .accele p{
-            color: darkgray;
-        }
-
-        .secondLine{
-            display: flex;
-            justify-content: space-between;
-            color: white;
-        }
-
-        .researsh{
-            background-color: purple;
-            margin: 2% 0%;
-            padding: 4% 4% 3% 4%;
-            width: 22%;
-        }
-
-        .taking{
-            background-color: rgb(110, 110, 192);
-            margin: 2% 0%;
-            padding: 4% 4% 3% 4%;
-            width: 22%;
-        }
-
-        .uucompon{
-            margin: 2% 0%;  
-            width: 30%;
-        }
-
-        .stuArtShow , .graduateStu{
-            display: flex;
-            margin: 20px 0px;
-            align-items: center;
-        }
-
-        .date{
-            margin: 0 25px 0 0;
-            color: #7aa120;
-            text-align: center;
-            border: 1px solid lightgray;
-            padding: 0 22px;
-        }
-
-        .somrbtn{
-            display: flex;
-            justify-content: space-between;
-            padding: 2% 0 2% 0%;
-        }
-
-        .btn{
-            color: #4f91cd;
-            padding: 5px 25px;
-            background-color: transparent;
-            border: 1px solid #4f91cd;
-            text-transform: uppercase;
-        }
-
-        .footer{
-            padding: 2%;
-            color: white;
-            background-color: #34383c;
-        }
-
-        .footer .interestingLinks{
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .footer ul{
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer ul li a{
-            color: darkgray;
-            text-decoration: none;
-            cursor: pointer;
-            display: block;
-            margin: 2% 0 0 0;
-        }
-
-        .footer ul li h3 a{
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-            display: block;
-            margin: 2% 0 0 0;
-        }
-
-        .footer ul li a:hover{
-            color: white;
-        }
-
-        .footer .copyRighSection{
-            margin: 8% 0 20% 0;
-            color: white;
-            text-align: center;
-        }
-
-        .footer .copyRighSection hr{
-            color: white;
-        }
-
-    </style>
 </head>
 <body>
     <div class="continer">
-        <div class="headerSection">
-            <ul>
-                <li><a href="#">Directories |</a></li>
-                <li><a href="#">Calendars |</a></li>
-                <li><a href="#">News |</a></li>
-                <li><a href="#">Library </a></li>
-            </ul>
-            <div class="logoContiner">
-                <img src="../assets/img/4.png"  alt="Loading">
-                <p>Bosten . massachusetts</p>
+        <div class="header">
+            <div class="quickNav">
+                <ul>
+                    <li><a href="#">Directories |</a></li>
+                    <li><a href="#">Calendars |</a></li>
+                    <li><a href="#">News |</a></li>
+                    <li><a href="#">Library </a></li>
+                </ul>
             </div>
-            <div class="rightbuttns">
+            <div class="branding">
+                <img src="../assets/img/4.png"  alt="Loading">
+                <pre>Bosten  .   assachusetts</pre>
+            </div>
+            <div class="utilities">
                 <button class="btnLink">
-                    <i class="fa fas fa-link"></i>
+                    <i class="fa fas fa-link btnIcon"></i>
                     <p>Link For</p>
                 </button>
                 <button class="btnSearsh">
-                    <i class="fa fas fa-search"></i>
+                    <i class="fa fas fa-search btnIcon"></i>
                     <p>Link For</p>
                 </button>
             </div>
         </div>
-        <div class="linksSection">
-            <div class="aboutSimmons"><p>About Simmons</p></div>
-            <div class="academics"><p>Academics</p></div>
+        <div class="mainNavigation">
+            <div class="aboutSimmons" style="border: 1px solid #211d1d;"><p>About Simmons</p></div>
+            <div class="academics" style="background-color: #232121;"><p>Academics</p></div>
             <div class="admission"><p>Admission & financial Aid</p></div>
             <div class="student"><p>Student</p></div>
             <div class="alhumnea"><p>Alhumnea/i & frinds</p></div>
 
         </div>
-        <div class="content">
-            <div class="lindingphoto">
+        <div class="mainContent">
+            <div class="hero">
                 <img src="../assets/img/5.jpg" alt="Loading">
+                <div class="heroTextContiner">
+                    <hr>
+                    <h1 style="font-family: none;">ACADEMICS</h1>
+                    <h2>The Journey Starts Here</h2>
+                    <hr>
+                </div>
             </div>
-            <div class="makeYourMove">
-                <div class="largeText"><h1>Make Your Move</h1></div>
-                <div class="icon"><i class="fa far far fa-arrow-alt-circle-right arrowIcon"></i></div>
-                <div class="smallText"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                     Suscipit quis repellendus repudiandae possimus nemo sint. Repudiandae ad atque aut
-                      fuga neque doloremque, et, ullam voluptatibus quis hic quo accusamus sunt?</p></div>
+            <div class="solgan">
+                <div class="largeText"><h1>Make Your Move  ></h1></div>
+                <div class="smallText"><p>you'll work discover , envolve and emerge with a new kind
+                     of confidencen. a new kind of courage. a leader gor yourself , your community and 
+                     the world. Apply now.</p></div>
             </div>
-            <div class="Services">
+            <div class="calloutBlocks">
                 <div class="firstLine">
-                    <div class="undeg">
+                    <div class="undergraduateBlock">
                         <h1>Undergraduate Programs</h1>
                         <p>you'll find over 50programs - and one that's just righ for you</p>
                     </div>
-                    <div class="graduate">
+                    <div class="graduateBlock">
                         <h1>Graduate Programs</h1>
                         <p>preparing you for the road ahead , whather it's the logical next step or a radical shift in direction </p>
                     </div>
-                    <div class="accele">
+                    <div class="accelerateBlock">
                         <h1>Accelerated Programs</h1>
                         <p>make the most of you Simmons moment combined undergraduate/graduate programs save time and increase value</p>
                     </div> 
                 </div>
                 <div class="secondLine">
-                    <div class="researsh">
+                    <div class="explorBlock">
                         <h1>Researsh That Speaks Volumes.</h1>
-                        <h1>Explore</h1>
+                        <h1><pre>Explore
+projects ></pre>
+                        </h1>
                     </div>
-                    <div class="taking">
+                    <div class="mentoringBlock">
                         <h1>Taking Pride in Mentoring.</h1>
-                        <h1>Meet the Faculty</h1>
+                        <h1><pre>Meet the 
+Faculty ></pre>
+                        </h1>
                     </div>
-                    <div class="uucompon">
-                        <p style="margin: 0; color: black;">Upcoming School Events</p>
+                    <div class="eventsBlock">
+                        <p>Upcoming School Events</p>
                         <div class="stuArtShow">
-                            <div class="date" style="color: #7aa120;">
+                            <div class="date">
                                 <p>JAN</p>
-                                <p>20</p>
+                                <p style="font-size: 40px;">20</p>
                             </div>
-                            <div class="text" style="margin: 0; color: #4f91cd;"><p>Student Art show</p></div>
+                            <div class="text"><p>Student Art show</p></div>
                         </div>
-                        <div class="graduateStu">
-                            <div class="date" style="color: #7aa120;">
+                        <div class="draduateStudies">
+                            <div class="date">
                                 <p>JAN</p>
-                                <p>30</p>
+                                <p style="font-size: 40px;">30</p>
                             </div>
-                            <div class="text" style="margin: 0; color: #4f91cd;">Draduate Studies Admission Information Session</div>
+                            <div class="text"><p>Draduate Studies Admission Information Session</p></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="somrbtn">
+            <div class="navigationButtons">
                 <button class="btn">visit simmons</button>
                 <button class="btn">Apply</button>
                 <button class="btn">Request information</button>
@@ -340,7 +113,7 @@
             </div>
         </div>
         <div class="footer">
-            <div class="interestingLinks">
+            <div class="footerNavigation">
                 <div class="col1">
                     <div>
                         <h3>Academics</h3>
@@ -425,7 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyRighSection">
+            <div class="copyright">
                 <hr>
                 <p>&copy; 2016 Simmons College | 300 the Fenway,Boston,MA 02115 | 617-521-2000</p>
             </div>
