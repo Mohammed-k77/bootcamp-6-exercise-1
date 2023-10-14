@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome-v6.4.2/css/all.css"> 
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #fb8d37;
+            transition: 1s background-color ease;
+        }
+
+        .continer{
+            margin: 2% 30%;
+            height: auto;
+            border-radius: 40px 40px 20px 20px ;
+            position: relative;
+            background-color: white;
+        }
+
+        .player{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 15px 5px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 15px #0000004f;
+        }
+
+        .player .player-img{
+            width: 40%;
+            padding: 10px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .player .player-img img{
+            height: 100%;
+            width: 100%;
+            box-shadow: 0px 0px 4px #0000003d;
+            border-radius: 50%;
+        }
+
+        .play , .pause{
+            color: white;
+            position: absolute;
+            top: 36%;
+            z-index: 2;
+            left: 13%;
+            font-size: 45px;
+        }
+
+        .pause{
+            display: none;
+        }
+
+        .backward{
+            top: 35%;
+            left: 35%;
+        }
+
+        .forward{
+            top: 34%;
+            right: 6%;
+        }
+
+        .backward ,
+        .forward{
+            position: absolute;
+            font-size: 40px;
+            color: #37373d;
+            cursor: pointer;
+        }
+
+        .player .player-des {
+            width: -webkit-fill-available;
+        }
+
+
+        .player .player-des > .playsong-name-scrool {
+            position: absolute;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 250px;
+            text-align: center;
+            top: 24%;
+            font-size: 35px;
+            left: 42%;
+            overflow: hidden;
+        }
+
+        .player .player-des > small{
+            position: absolute;
+            left: 58%;
+            font-weight: bold;
+            font-size: 20px;
+            top: 54%;
+            color: #8f8f8f;
+        }
+
+        .player .player-des input[type="range"]{
+            position: absolute;
+            left: 45%;
+            width: 40%;
+            bottom: 18%;
+            animation-name: pro;
+            animation-duration: 60s;
+        }
+
+        .song-list{
+            padding: 20px 25px 10px 30px;
+        }
+
+        .song-list > div{
+            display: flex;
+            border-bottom: 2px solid #808080a6;
+            cursor: pointer;
+            transition: background-color 1s ease;
+        }
+
+        .song-list > div:hover{
+            background-color: #373737;
+        }
+
+        .song-list > div:hover .song-des p{
+            color: white;
+        }
+
+        .song-list div .song-img{
+            width: 30%;
+        }
+
+        .song-list div .song-des{
+            width: -webkit-fill-available;
+        }
+
+        .song-list > div .song-des p{
+            margin: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            transition: color 1s ease;
+        }
+
+        .song-list > div .song-des small:first-of-type{
+            margin: 15px 58px 0 15px;
+            font-weight: bold;
+            color: #8f8f8f;
+            font-size: 15px;
+            display: inline-block;
+            width: 62%;
+        }
+
+        .song-list > div .song-des small:last-of-type{
+            font-weight: bold;
+            color: #8f8f8f;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        .song-list > div .song-img{
+            padding: 10px;
+        }
+
+        .song-list > div .song-img img{
+            height: 15vh;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 9px #0000004f;
+        }
+
+        /* Animate Classes */
+
+        .play-img{
+            animation: play-img 3s linear infinite;
+        }
+
+        .playsong-name-scrol{
+            animation-name: name-scrol;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes play-img{
+            0%{
+                transform: rotate(0deg);
+                box-shadow: 1px 1px 20px #cf03ff;
+            }
+
+            100%{
+                transform: rotate(360deg);
+                box-shadow: 1px 1px 20px #cf03ff;
+            }
+        }
+
+        @keyframes name-scrol{
+            50%{
+                transform: translate(203px, 0px)
+            }
+
+            60%{
+                transform: translate(-169px, 0px);
+                display: none;
+            }
+
+            60%{
+                transform: translate(-169px, 0px);
+                display: block;
+            }
+
+            90%{
+                transform: translate(-33px, 0px);
+                display: block;
+            }
+
+            100%{
+                transform: translate(0px, 0px)
+            }
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body id="back-color">
+    <div class="continer">
+        <div id="player" class="player">
+            <audio style="display: none;" id="play-song" src="../assets/audio/1.mp3" controls>
+            </audio>
+            <div onclick="playStop()" class="player-img">
+                <i id="play" class="fa fas fa-play play"></i>
+                <i id="pause" class="fa fas fas fa-pause pause"></i>
+                <img id="playsong-img" src="../assets/img/10.png" alt="loadding">
+            </div>
+            <div class="player-des">
+                <i onclick="PriviousSong()" class="fa fas fa-step-backward backward"></i>
+                <div class="playsong-name-scrool">
+                    <p id="playsong-name">4-For You</p>
+                </div>
+                <small id="playsong-songer">Emneim</small>
+                <input id="song-progress" type="range" value="0">
+                <i onclick="NextSong()" class="fa fas fa-step-forward  forward"></i>
+                <small id="playsong-duration" style="display: none;">04:30</small>
+            </div>
+        </div>
+        <div class="song-list">
+            <div id="song1" onclick="switchToSongOne()" class="song1">
+                <audio style="display: none;" id="audio1" src="../assets/audio/2.mp3" controls>
+                </audio>
+                <div class="song-img">
+                    <img id="song1-img" src="../assets/img/12.png" alt="Loadding">
+                </div>
+                <div class="song-des">
+                    <p id="song1-name">Die Seen</p>
+                    <small id="song1-songer">2 Pac</small>
+                    <small id="song1-duration">01:55</small>
+                </div>
+            </div>
+            <div id="song2" onclick="switchToSongTwo()" class="song2">
+                <audio style="display: none;" id="audio2" src="../assets/audio/3.mp3" controls>
+                </audio>
+                <div class="song-img">
+                    <img id="song2-img" src="../assets/img/11.png" alt="Loadding">
+                </div>
+                <div class="song-des">
+                    <p id="song2-name">Happy Live</p>
+                    <small id="song2-songer">Klash</small>
+                    <small id="song2-duration">02:15</small>
+                </div>
+            </div>
+            <div id="song3" onclick="switchToSongThree()" class="song3">
+                <audio style="display: none;" id="audio3" src="../assets/audio/4.mp3" controls>
+                </audio>
+                <div class="song-img">
+                    <img id="song3-img" src="../assets/img/1.jpg" alt="Loadding">
+                </div>
+                <div class="song-des">
+                    <p id="song3-name">Moon</p>
+                    <small id="song3-songer">Errick</small>
+                    <small id="song3-duration">04:10</small>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="links-continer">
+        <a href="../index.html"><i class="fa fas fa-home home-icon"></i></a>
+        <div class="left-right">
+            <i onclick="nextLink()" onclick="privuosLink()" class="fa-solid fa-chevron-left left-link"></i> 
+            <i onclick="privuosLink()" class="fa-solid fa-chevron-right right-link"></i> 
+        </div>
+        <div class="page-links">
+            <ul>
+                <li><a href="../pages/ex1/Home.html">1</a></li>
+                <li><a href="../pages/ex2.html">2</a></li>
+                <li><a href="../pages/ex3.html">3</a></li>
+                <li><a href="../pages/ex4.html">4</a></li>
+                <li><a href="../pages/ex5.html">5</a></li>
+                <li><a href="../pages/ex6.html">6</a></li>
+                <li><a href="../pages/ex7.html">7</a></li>
+                <li><a href="../pages/ex8.html">8</a></li>
+                <li><a href="../pages/ex9.html">9</a></li>
+                <li><a href="../pages/ex10.html">10</a></li>
+                <li><a href="../pages/ex11.html">11</a></li>
+                <li><a href="../pages/ex12.html">12</a></li>
+                <li><a href="../pages/ex13.html">13</a></li>
+                <li><a href="../pages/ex14.html">14</a></li>
+                <li><a href="../pages/ex15.html">15</a></li>
+                <li><a href="../pages/ex16.html">16</a></li>
+                <li><a href="../pages/ex17.html">17</a></li>
+                <li><a href="../pages/ex18.html">18</a></li>
+                <li><a href="../pages/ex19.html">19</a></li>
+                <li><a href="../pages/ex20.html">20</a></li>
+                <li><a href="../pages/ex21.html">21</a></li>
+                <li><a href="../pages/ex22.html">22</a></li>
+                <li><a href="../pages/ex23.html">23</a></li>
+                <li><a href="../pages/ex24.html">24</a></li>
+                <li><a href="../pages/ex25.html">25</a></li>
+                <li><a href="../pages/ex26.html">26</a></li>
+                <li><a href="../pages/ex27.html">27</a></li>
+                <li><a href="#">28</a></li>
+                <li><a href="#">29</a></li>
+                <li><a href="#">30</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="../../assets/lib/fontawesome-v6.4.2/js/all.js"></script>
+    <script src="../assets/js/links.js"></script>
+
+    <script>
+        var playState = ""
+        var songNum = 4;
+        // var rangeInput = document.getElementById('song-progress');
+        function playStop(){
+            if(playState == 'stop' || playState == "" ){
+                document.getElementById('play-song').play();
+                document.getElementById('playsong-name').style.removeProperty("transform");
+                document.getElementById('play').style.display='none';
+                document.getElementById('pause').style.display='block';
+                document.getElementById('playsong-name').classList.add('playsong-name-scrol')
+                document.getElementById('playsong-img').classList.add('play-img');
+                playState ='play';
+
+                // while(true){
+                //     if (rangeInput.value < rangeInput.max) {
+                // rangeInput.value = parseInt(rangeInput.value) + 10;
+                // setTimeout(increaseRangeValue, 1); // Delay between increments (in milliseconds)
+                // }
+                // rangeInput.value=0;
+                // }
+            }
+
+            else if(playState == 'play' || playState == "" ){
+                document.getElementById('play-song').pause();
+                document.getElementById('play').style.display='block';
+                document.getElementById('pause').style.display='none';
+                document.getElementById('playsong-name').classList.remove('playsong-name-scrol')
+                document.getElementById('playsong-name').style.transform='translate(0px, 0px)';
+                document.getElementById('playsong-img').classList.remove('play-img');
+                // rangeInput.value=0;
+                playState ='stop';
+            }
+        }
+
+        function NextSong(){
+            if(songNum==1)
+            {
+                switchToSongTwo();
+            }
+
+            else if(songNum==2)
+            {
+                switchToSongThree();
+            }
+
+            else if(songNum==3)
+            {
+                switchToSongOne();
+            }
+
+            else{
+                switchToSongOne();
+            }
+        }
+
+        function PriviousSong(){
+            if(songNum==1)
+            {
+                switchToSongThree();
+            }
+
+            else if(songNum==2)
+            {
+                switchToSongOne();
+            }
+
+            else if(songNum==3)
+            {
+                switchToSongTwo();
+            }
+
+            else{
+                switchToSongThree();
+            }
+        }
+
+        function switchToSongOne(){
+            // debugger;
+            document.getElementById('back-color').style.backgroundColor='#cb8087';
+            var song = document.getElementById('play-song').src;
+            var songName = document.getElementById('playsong-name').innerHTML;
+            var songSonger = document.getElementById('playsong-songer').innerHTML;
+            var songImg = document.getElementById('playsong-img').src;       
+            var playsongDuration = document.getElementById('playsong-duration').innerHTML;       
+            document.getElementById('play-song').src = document.getElementById('audio1').src;    
+            document.getElementById('playsong-name').innerHTML=document.getElementById('song1-name').innerHTML;
+            document.getElementById('playsong-songer').innerHTML=document.getElementById('song1-songer').innerHTML;
+            document.getElementById('playsong-img').src=document.getElementById('song1-img').src;
+            document.getElementById('playsong-duration').innerHTML = document.getElementById('song1-duration').innerHTML;
+            document.getElementById('audio1').src = song ;
+            document.getElementById('song1-name').innerHTML = songName ;
+            document.getElementById('song1-songer').innerHTML = songSonger;
+            document.getElementById('song1-img').src = songImg;
+            document.getElementById('song1-duration').innerHTML = playsongDuration;
+            songNum = 1;
+        }
+
+        function switchToSongTwo(){
+            document.getElementById('back-color').style.backgroundColor='#fadda7';
+            var song = document.getElementById('play-song').src;
+            var songName = document.getElementById('playsong-name').innerHTML;
+            var songSonger = document.getElementById('playsong-songer').innerHTML;
+            var songImg = document.getElementById('playsong-img').src;       
+            var playsongDuration = document.getElementById('playsong-duration').innerHTML;   
+            document.getElementById('play-song').src = document.getElementById('audio2').src;         
+            document.getElementById('playsong-name').innerHTML=document.getElementById('song2-name').innerHTML;
+            document.getElementById('playsong-songer').innerHTML=document.getElementById('song2-songer').innerHTML;
+            document.getElementById('playsong-img').src=document.getElementById('song2-img').src;
+            document.getElementById('playsong-duration').innerHTML = document.getElementById('song2-duration').innerHTML;
+            document.getElementById('audio2').src = song ;
+            document.getElementById('song2-name').innerHTML = songName ;
+            document.getElementById('song2-songer').innerHTML = songSonger;
+            document.getElementById('song2-img').src = songImg;
+            document.getElementById('song2-duration').innerHTML = playsongDuration;
+            songNum = 2;
+        }
+
+        function switchToSongThree(){
+            document.getElementById('back-color').style.backgroundColor='#c7847f';
+            var song = document.getElementById('play-song').src;
+            var songName = document.getElementById('playsong-name').innerHTML;
+            var songSonger = document.getElementById('playsong-songer').innerHTML;
+            var songImg = document.getElementById('playsong-img').src;       
+            var playsongDuration = document.getElementById('playsong-duration').innerHTML;  
+            document.getElementById('play-song').src = document.getElementById('audio3').src;          
+            document.getElementById('playsong-name').innerHTML=document.getElementById('song3-name').innerHTML;
+            document.getElementById('playsong-songer').innerHTML=document.getElementById('song3-songer').innerHTML;
+            document.getElementById('playsong-img').src=document.getElementById('song3-img').src;
+            document.getElementById('playsong-duration').innerHTML = document.getElementById('song3-duration').innerHTML;
+            document.getElementById('audio3').src = song ;
+            document.getElementById('song3-name').innerHTML = songName ;
+            document.getElementById('song3-songer').innerHTML = songSonger;
+            document.getElementById('song3-img').src = songImg;
+            document.getElementById('song3-duration').innerHTML = playsongDuration;
+            songNum = 3;
+        }
+
+    </script>
+</body>
+</html>

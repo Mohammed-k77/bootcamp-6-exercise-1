@@ -1,0 +1,70 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.continer{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100vh;
+}
+
+.continer .backImg{
+    width: 45%;
+    margin: 3% 0 0 27%;
+    height: 90vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.text{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: color-dodge;
+    width: 50%;
+    z-index: 1;
+}
+
+.text pre{
+    font-size: 45px;
+    margin: 10% 0 0 0;
+    padding: 59px 0;
+    padding: 6% 0;
+    z-index: -1;
+    position: unset;
+    z-index: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: black;
+    line-height: 3.3rem;
+    top: -48px;
+    text-align: right;
+    height: 73vh;
+    text-transform: uppercase;
+}
+
+.cotation{
+    position: absolute;
+    color: #e7e7e7;
+    top: 1%;
+    right: 66%;
+    z-index: 3;
+    font-weight: 900;
+    font-size: 115px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0
+}
+
+.segniture{
+    height: 26vh;
+    width: 22%;
+    left: 32%;
+    top: 73%;
+    bottom: 7%;
+    position: absolute;
+    z-index: 2;
+}
+

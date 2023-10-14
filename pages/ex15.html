@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome-v6.4.2/css/all.css"> 
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <title>Document</title>
+    <style>
+
+        :root{
+            --prymary-color:gold;
+            --secondry-color:#ffd90013;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #313131;
+            font-family: fantasy;
+            font-weight: bold;
+            color: var(--prymary-color);
+        }
+
+        .continer{
+            margin: 2% 2%;
+        }
+        
+        header{
+            margin: 2% 0;
+        }
+
+        .head-title{
+            font-size: 30px;
+            text-align: center;
+        }
+
+        main{
+            display: flex;
+            margin: 2% 0;
+            padding: 4% 0% 0 15%;
+        }
+
+        .img-progress{
+            width: 400px;
+            height: auto;
+        }                               
+
+        .img-progress img{
+            height: 50vh;
+        }
+
+        table{
+            background-color: transparent;
+            height: 400px;
+            width: 600px;
+            text-align: center;
+        }
+
+        td{
+            height: auto;
+            width: auto;
+            margin: 0 0px;
+            padding: 0 10px;
+        }
+
+        .lbl-pro{
+            font-size: 20px;
+        }
+
+        .continer-pro{
+            height: 10px;
+            width: 600px;
+            border-radius: 15px;
+            background-color: var(--secondry-color);
+        }
+
+        .length-pro , .captilaize-pro , .spaccing-pro , .sumicolon-pro {
+            height: 10px;
+            width: 0%;
+            border-radius: 15px;
+            box-shadow: 1px 1px 15px var(--prymary-color);
+            background-color: var(--prymary-color);
+            position: relative;
+        }
+
+        .length-pro::after , .captilaize-pro::after , .spaccing-pro::after , .sumicolon-pro::after {
+            position: absolute;
+            content: "";
+            height: 15px;
+            top: -3px;
+            right: -9px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: #ffe13e;
+        }
+
+        footer{
+            height: auto;
+            padding: 0 12%;
+        }
+
+        .input-faild{
+            height: 60px;
+            border-radius: 15px;
+            padding: 10px;
+            width: 100%;
+            background-color: var(--secondry-color);
+            border: none;
+            outline: 2px solid #ffd9008e;
+            color: var(--prymary-color);
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 25px;
+        }  
+
+        .input-faild:hover , .input-faild:focus{
+            outline: 2px solid var(--prymary-color);
+        }  
+
+
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <header><p class="head-title">Build your (strong) password here:</p></div></header>
+        <main>
+            <div class="img-progress">
+                <img id="mario-img" src="../assets/img/Mario.png" alt="Loadding">
+            </div>
+            <div class="progresses">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><label class="lbl-pro">Length</label></td>
+                        <td>
+                            <div class="continer-pro">
+                                <div id="length-pro" class="length-pro"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="lbl-pro">Captilaize</label></td>
+                        <td>
+                            <div class="continer-pro">
+                                <div id="captilaize-pro" class="captilaize-pro"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td><label class="lbl-pro">Spaccing</label></td>
+                        <td>
+                            <div class="continer-pro">
+                                <div id="spaccing-pro" class="spaccing-pro"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td><label class="lbl-pro">Sumicolon</label></td>
+                        <td>
+                            <div class="continer-pro">
+                                <div id="sumicolon-pro" class="sumicolon-pro"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+        </main>
+        <footer>
+            <input oninput="UserInput()" id="text-input" class="input-faild" type="text">
+        </footer>
+    </div>
+
+    <div class="links-continer">
+        <a href="../index.html"><i class="fa fas fa-home home-icon"></i></a>
+        <div class="left-right">
+            <i onclick="nextLink()" onclick="privuosLink()" class="fa-solid fa-chevron-left left-link"></i> 
+            <i onclick="privuosLink()" class="fa-solid fa-chevron-right right-link"></i> 
+        </div>
+        <div class="page-links">
+            <ul>
+                <li><a href="../pages/ex1/Home.html">1</a></li>
+                <li><a href="../pages/ex2.html">2</a></li>
+                <li><a href="../pages/ex3.html">3</a></li>
+                <li><a href="../pages/ex4.html">4</a></li>
+                <li><a href="../pages/ex5.html">5</a></li>
+                <li><a href="../pages/ex6.html">6</a></li>
+                <li><a href="../pages/ex7.html">7</a></li>
+                <li><a href="../pages/ex8.html">8</a></li>
+                <li><a href="../pages/ex9.html">9</a></li>
+                <li><a href="../pages/ex10.html">10</a></li>
+                <li><a href="../pages/ex11.html">11</a></li>
+                <li><a href="../pages/ex12.html">12</a></li>
+                <li><a href="../pages/ex13.html">13</a></li>
+                <li><a href="../pages/ex14.html">14</a></li>
+                <li><a href="../pages/ex15.html">15</a></li>
+                <li><a href="../pages/ex16.html">16</a></li>
+                <li><a href="../pages/ex17.html">17</a></li>
+                <li><a href="../pages/ex18.html">18</a></li>
+                <li><a href="../pages/ex19.html">19</a></li>
+                <li><a href="../pages/ex20.html">20</a></li>
+                <li><a href="../pages/ex21.html">21</a></li>
+                <li><a href="../pages/ex22.html">22</a></li>
+                <li><a href="../pages/ex23.html">23</a></li>
+                <li><a href="../pages/ex24.html">24</a></li>
+                <li><a href="../pages/ex25.html">25</a></li>
+                <li><a href="../pages/ex26.html">26</a></li>
+                <li><a href="../pages/ex27.html">27</a></li>
+                <li><a href="#">28</a></li>
+                <li><a href="#">29</a></li>
+                <li><a href="#">30</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="../../assets/lib/fontawesome-v6.4.2/js/all.js"></script>
+    <script src="../assets/js/links.js"></script>
+
+    <script>
+        let pank=['!','@','#','$','%','^','&','*','(',')','_','-','=','+','*','\\','/','|','~']
+        function UserInput(){
+            let strong = 0;
+            let lengthCounter =0;
+            let captilCounter=0;
+            let spaceCounter=0;
+            let sumicolonCounter=0;
+            let x =document.getElementById('text-input').value;
+            lengthCounter = x.length;
+            for(let i=0;i<=x.length-1;i++){
+                if(!(x[i]==x[i].toLowerCase()))
+                captilCounter +=1;
+                if(x[i]==" ")
+                spaceCounter +=1;
+                if(pank.includes(x[i]))
+                sumicolonCounter+=1;
+            }
+
+            if (`${(lengthCounter / 20) * 100}`<= 100){
+                document.getElementById('length-pro').style.width = `${(lengthCounter / 20) * 100}%`;
+            }
+
+            if(`${(captilCounter/20)*100}` <= 100){
+                document.getElementById('captilaize-pro').style.width=`${(captilCounter/20)*100}%`;
+            }
+
+            if(`${(spaceCounter/20)*100}` <= 100){
+                document.getElementById('spaccing-pro').style.width=`${(spaceCounter/20)*100}%`;
+            }
+
+            if(`${(sumicolonCounter/20)*100}` <= 100){
+                document.getElementById('sumicolon-pro').style.width=`${(sumicolonCounter/20)*100}%`;
+            }
+            if((lengthCounter/20)*100 >  100){
+                strong+=100;
+            }
+            else
+            strong+=(lengthCounter / 20) * 100;
+
+            if((captilCounter/20)*100 > 100){
+                strong+=100;
+            }
+            else
+            strong+=(captilCounter / 20) * 100;
+
+            if((spaceCounter/20)*100 > 100){
+                strong+=100;
+            }
+            else
+            strong+=(spaceCounter / 20) * 100;
+
+            if((sumicolonCounter/20)*100 > 100){
+                strong+=100;
+            }
+            else
+            strong+=(sumicolonCounter / 20) * 100;
+            debugger
+            strong = (strong/400)*100;
+
+            if(strong >= 15 && strong<=30)
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 26px #31f8eeb4)';
+            else if(strong>30 && strong<=45)
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 30px #11a0ffb4)';
+            else if(strong>45 && strong<=65)
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 35px #03f553b4)';
+            else if(strong>65 && strong<=85)
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 40px #f58c03b4)';
+            else if(strong>85 && strong<=95)
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 45px gold)';
+            else if(strong>95 && strong <=100) 
+                document.getElementById('mario-img').style.filter='drop-shadow(1px 1px 50px red)';
+            else
+                document.getElementById('mario-img').style.removeProperty('filter');
+
+        }
+    </script>
+</body>
+</html>

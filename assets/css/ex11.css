@@ -1,0 +1,105 @@
+*{
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+}
+
+.continer{
+    margin: 4% 13% 0 13%;
+    position: relative;
+    display: flex;
+    height: 91vh;
+}
+
+.redch{
+    position: relative;
+    width: 50%;
+    height: 87vh;
+    box-shadow: 13px 24px 26px lightgray;
+    margin: 2% 2%;
+    border-radius: 20px;
+    background-color: #a72122;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.bluech{
+    position: relative;
+    width: 50%;
+    height: 87vh;
+    box-shadow: 13px 24px 26px lightgray;
+    margin: 2% 2%;
+    border-radius: 20px;
+    background-color: #4bb5e5;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* .redch:hover,
+.bluech:hover{
+    scale: 1.1;
+} */
+
+.redch:hover .imgcontiner img,
+.bluech:hover .imgcontiner img{
+    transform: translateY(-100px) rotate(-25deg) ;
+}
+
+.imgcontiner img{
+    height: 40vh;
+    filter: drop-shadow(2px 3px 7px black);
+    width: 69%;
+    margin: 1% 2% 0 14%;
+    transition: transform 1s ease;
+}
+
+.description h2{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.description p{
+    text-align: center;
+    color: white;
+}
+
+.description h3{
+    color: white;
+    text-align: center;
+}
+
+.buynow{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    margin: 0 20%;
+}
+
+.buynow button{
+    background-color: black;
+    color: white;
+    width: 66%;
+    margin: 1% 2%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.myIcon{
+    font-size: 35px;
+    width: 18%;
+    padding: 1.8% 0.9%;
+    color: black;
+    height: 7.1vh;
+    border: 1px solid;
+    background-color: white;
+}
+

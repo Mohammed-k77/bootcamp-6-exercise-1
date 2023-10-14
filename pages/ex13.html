@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../assets/lib/fontawesome-v6.4.2/css/all.css"> 
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #35363a;
+            position: relative;
+            height: 100vh;
+        }
+
+        .continer{
+            width: 35%;
+            bottom: 55px;
+            height: 21vh;
+            font-size: 30px;
+            top: 64%;
+            border-radius: 0 0 25% 25%;
+            left: 35%;
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box{
+            top: 35%;
+            left: 12%;
+        }
+
+        .home{
+            top: 35%;
+            left: 45%;
+        }
+
+        .calendar{
+            top: 35%;
+            left: 76%;
+        }
+
+
+        .icon{
+            color: #e51414;
+            position: absolute;
+            z-index: 2;
+            font-size: 40px;
+        }
+
+        .icon:hover{
+            color: white;
+            padding: 20px;
+            top: 20%;
+            z-index: 1;
+            background-color: #e51414;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .box-focused{ 
+            z-index: 2;
+            position: absolute;
+            color: red;
+            animation-name: box-up;
+            animation-duration: 1s;
+        }
+
+        .home-focused{ 
+            z-index: 2;
+            position: absolute;
+            color: red;
+            animation-name: home-up;
+            animation-duration: 1s;
+        }
+
+        .calendar-focused{ 
+            z-index: 2;
+            position: absolute;
+            color: red;
+            animation-name: calendar-up;
+            animation-duration: 1s;
+        }
+
+        .cicle{
+            color: white;
+            padding: 35px;
+            position: absolute;
+            display: none;
+            top: 83%;
+            left: 42%;
+            z-index: 1;
+            background-color: #e51414;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        @keyframes box-up{
+            0%{
+                transform: translate(0px, 0px);
+                color: red;
+            }
+
+            50%{
+                transform: translate(0px, -240px) rotate(90deg);
+                color: red;
+            }
+
+            100%{
+                transform: translate(0px, -72px) rotate(360deg);;
+                color: white;
+            }
+        }
+
+        @keyframes box-form0to1{
+            0%{
+                transform: translate(0px, 0px);
+            }
+
+            50%{
+                transform: translate(-165px, 0px);
+            }
+
+            100%{
+                transform: translate(-165px, -159px);
+            }
+
+        }
+
+        @keyframes box-form2to1{
+            0%{
+                transform: translate(-3px, -159px);
+            }
+
+            40%{
+                transform: translate(-3px, 0px);
+            }
+
+            70%{
+                transform: translate(-165px, 0px);
+            }
+
+            100%{
+                transform: translate(-165px, -159px);
+            }
+        }
+
+        @keyframes box-form3to1{
+            0%{
+                transform: translate(141px, -159px);
+            }
+
+            40%{
+                transform: translate(141px, 0px);
+            }
+
+            70%{
+                transform: translate(-165px, 0px);
+            }
+
+            100%{
+                transform: translate(-168px, -159px);
+            }
+        }
+
+        /*********************************************************/
+
+        @keyframes home-up{
+            0%{
+                transform: translate(0px, 0px);
+                color: red;
+            }
+
+            50%{
+                transform: translate(0px, -240px) rotate(90deg);
+                color: red;
+            }
+
+            100%{
+                transform: translate(0px, -72px) rotate(360deg);;
+                color: white;
+            }
+        }
+
+        @keyframes home-form0to2{
+            0%{
+                transform: translate(-3px, 0px);
+            }
+
+            50%{
+                transform: translate(-3px, -150px);
+            }
+
+            100%{
+                transform: translate(-3px, -159px);
+            }
+
+        }
+
+        @keyframes home-form1to2{
+            0%{
+                transform: translate(-165px, -159px);
+            }
+
+            40%{
+                transform: translate(-165px, 0px);
+            }
+
+            70%{
+                transform: translate(-3px, 0px);
+            }
+
+            100%{
+                transform: translate(-3px, -159px);
+            }
+        }
+
+        @keyframes home-form3to2{
+            0%{
+                transform: translate(141px, -159px);
+            }
+
+            40%{
+                transform: translate(141px, 0px);
+            }
+
+            70%{
+                transform: translate(-3px, 0px);
+            }
+
+            100%{
+                transform: translate(-3px, -159px);
+            }
+        }
+
+          /*********************************************************/
+
+          @keyframes calendar-up{
+            0%{
+                transform: translate(0px, 0px);
+                color: red;
+            }
+
+            50%{
+                transform: translate(0px, -240px) rotate(90deg);
+                color: red;
+            }
+
+            100%{
+                transform: translate(0px, -72px) rotate(360deg);;
+                color: white;
+            }
+        }
+
+        @keyframes calendar-form0to3{
+            0%{
+                transform: translate(-3px, 0px);
+            }
+
+            50%{
+                transform: translate(141px, 0px);
+            }
+
+            100%{
+                transform: translate(141px, -159px);
+            }
+
+        }
+
+        @keyframes calendar-form1to3{
+            0%{
+                transform: translate(-165px, -159px);
+            }
+
+            40%{
+                transform: translate(-165px, 0px);
+            }
+
+            70%{
+                transform: translate(141px, 0px);
+            }
+
+            100%{
+                transform: translate(141px, -159px);
+            }
+        }
+
+        @keyframes calendar-form2to3{
+            0%{
+                transform: translate(-3px, -159px);
+            }
+
+            40%{
+                transform: translate(-3px, 0px);
+            }
+
+            70%{
+                transform: translate(141px, 0px);
+            }
+
+            100%{
+                transform: translate(141px, -159px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="continer">
+            <i id="box" class="fa fas fa-box icon box" onclick="robeicClick()"></i>
+
+            <i id="home" class="fa fas fa-home icon home" onclick="homeClick()"></i>
+
+            <i id="calendar" class="fa fas fa-calendar-day icon calendar" onclick="calendarClick()"></i>
+
+        <div id="cicle" class="cicle"></div>
+    </div>
+
+    <div class="links-continer">
+        <a href="../index.html"><i class="fa fas fa-home home-icon"></i></a>
+        <div class="left-right">
+            <i onclick="nextLink()" onclick="privuosLink()" class="fa-solid fa-chevron-left left-link"></i> 
+            <i onclick="privuosLink()" class="fa-solid fa-chevron-right right-link"></i> 
+        </div>
+        <div class="page-links">
+            <ul>
+                <li><a href="../pages/ex1/Home.html">1</a></li>
+                <li><a href="../pages/ex2.html">2</a></li>
+                <li><a href="../pages/ex3.html">3</a></li>
+                <li><a href="../pages/ex4.html">4</a></li>
+                <li><a href="../pages/ex5.html">5</a></li>
+                <li><a href="../pages/ex6.html">6</a></li>
+                <li><a href="../pages/ex7.html">7</a></li>
+                <li><a href="../pages/ex8.html">8</a></li>
+                <li><a href="../pages/ex9.html">9</a></li>
+                <li><a href="../pages/ex10.html">10</a></li>
+                <li><a href="../pages/ex11.html">11</a></li>
+                <li><a href="../pages/ex12.html">12</a></li>
+                <li><a href="../pages/ex13.html">13</a></li>
+                <li><a href="../pages/ex14.html">14</a></li>
+                <li><a href="../pages/ex15.html">15</a></li>
+                <li><a href="../pages/ex16.html">16</a></li>
+                <li><a href="../pages/ex17.html">17</a></li>
+                <li><a href="../pages/ex18.html">18</a></li>
+                <li><a href="../pages/ex19.html">19</a></li>
+                <li><a href="../pages/ex20.html">20</a></li>
+                <li><a href="../pages/ex21.html">21</a></li>
+                <li><a href="../pages/ex22.html">22</a></li>
+                <li><a href="../pages/ex23.html">23</a></li>
+                <li><a href="../pages/ex24.html">24</a></li>
+                <li><a href="../pages/ex25.html">25</a></li>
+                <li><a href="../pages/ex26.html">26</a></li>
+                <li><a href="../pages/ex27.html">27</a></li>
+                <li><a href="#">28</a></li>
+                <li><a href="#">29</a></li>
+                <li><a href="#">30</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="../../assets/lib/fontawesome-v6.4.2/js/all.js"></script>
+    <script src="../assets/js/links.js"></script>
+    <script>
+        var previousPlac ="";
+        function robeicClick(){
+            if(previousPlac !='box'){
+            document.getElementById('box').classList.remove('icon');
+            document.getElementById('box').classList.add('box-focused');
+            document.getElementById('cicle').style.display='block';
+            if(previousPlac ==''){
+                document.getElementById('cicle').style.animationName='box-form0to1';
+            }
+            else if(previousPlac =='home'){
+                document.getElementById('cicle').style.animationName='box-form2to1';
+                document.getElementById('home').classList.remove('home-focused');
+                document.getElementById('home').classList.add('icon');
+                document.getElementById('home').style.removeProperty("transform");
+                document.getElementById('home').style.removeProperty("color");
+            }
+            else{
+                document.getElementById('cicle').style.animationName='box-form3to1';
+                document.getElementById('calendar').classList.remove('calendar-focused');
+                document.getElementById('calendar').classList.add('icon');
+                document.getElementById('calendar').style.removeProperty("transform");
+                document.getElementById('calendar').style.removeProperty("color");
+            }
+            document.getElementById('box').style.color='white';
+            document.getElementById('box').style.transform='translate(0px, -72px)';
+            document.getElementById('cicle').style.animationDuration='1s';
+            document.getElementById('cicle').style.transform='translate(-165px, -159px)';
+            document.getElementById('cicle').style.outline='20px solid #ffffff36';
+            previousPlac = "box";
+            }
+        }
+
+        function homeClick(){
+            if(previousPlac !='home'){
+            document.getElementById('home').classList.remove('icon');
+            document.getElementById('home').classList.add('home-focused');
+            document.getElementById('cicle').style.display='block';
+            if(previousPlac ==''){
+                document.getElementById('cicle').style.animationName='home-form0to1';
+            }
+            else if(previousPlac =='box'){
+                document.getElementById('cicle').style.animationName='home-form1to2';
+                document.getElementById('box').classList.remove('box-focused');
+                document.getElementById('box').classList.add('icon');
+                document.getElementById('box').style.removeProperty("transform");
+                document.getElementById('box').style.removeProperty("color");
+            }
+            else{
+                document.getElementById('cicle').style.animationName='home-form3to2';
+                document.getElementById('calendar').classList.remove('calendar-focused');
+                document.getElementById('calendar').classList.add('icon');
+                document.getElementById('calendar').style.removeProperty("transform");
+                document.getElementById('calendar').style.removeProperty("color");
+            }
+            document.getElementById('home').style.color='white';
+            document.getElementById('home').style.transform='translate(0px, -72px)';
+            document.getElementById('cicle').style.animationDuration='1s';
+            document.getElementById('cicle').style.transform='translate(-3px, -159px)';
+            document.getElementById('cicle').style.outline='20px solid #ffffff36';
+            previousPlac = "home";
+            }
+        }
+
+        function calendarClick(){
+            if(previousPlac !='calendar'){
+            document.getElementById('calendar').classList.remove('icon');
+            document.getElementById('calendar').classList.add('calendar-focused');
+            document.getElementById('cicle').style.display='block';
+            if(previousPlac ==''){
+                document.getElementById('cicle').style.animationName='calendar-form0to3';
+            }
+            else if(previousPlac =='box'){
+                document.getElementById('cicle').style.animationName='calendar-form1to3';
+                document.getElementById('box').classList.remove('box-focused');
+                document.getElementById('box').classList.add('icon');
+                document.getElementById('box').style.removeProperty("transform");
+                document.getElementById('box').style.removeProperty("color");
+            }
+            else{
+                document.getElementById('cicle').style.animationName='calendar-form2to3';
+                document.getElementById('home').classList.remove('home-focused');
+                document.getElementById('home').classList.add('icon');
+                document.getElementById('home').style.removeProperty("transform");
+                document.getElementById('home').style.removeProperty("color");
+            }
+            document.getElementById('calendar').style.color='white';
+            document.getElementById('calendar').style.transform='translate(0px, -72px)';
+            document.getElementById('cicle').style.animationDuration='1s';
+            document.getElementById('cicle').style.transform='translate(141px, -159px)';
+            document.getElementById('cicle').style.outline='20px solid #ffffff36';
+            previousPlac = "calendar";
+            }
+        }
+    </script>
+</body>
+</html>
