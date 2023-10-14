@@ -1,0 +1,848 @@
+:root{
+    --primary-color:#53ec62;
+    --glopal-bg-color:#fcfcfc;
+    --primary-font-color:#000;
+    --secondry-font-color:#747474;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: var(--glopal-bg-color);
+}
+
+.continer{
+    padding: 0 5%;
+}
+
+/* Start Header */
+
+header{
+
+}
+
+/* Navbar */
+
+nav .logo{
+    width: 10%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+/* Links  */
+
+.links{
+    width: 33%;
+}
+
+.links select{
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    padding: 0 10px 0 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.links select:focus{
+    outline: none;
+}
+
+.links select option{
+    box-shadow: none;
+    background-color: var(--glopal-bg-color);
+}
+
+.links ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation buttons */
+
+.btn-navigation{
+    display: flex;
+    align-items: center;
+}
+
+.btn-navigation .searsh , .btn-navigation .cart {
+    position: relative;
+}
+
+.btn-navigation .searsh-icon ,
+.btn-navigation .cart-icon{
+    font-size: 20px;
+    margin: 0 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.btn-navigation .cart-icon::after{
+    content: "8";
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+    top: -11px;
+    right: 4px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.btn-navigation .btnContact{
+    padding: 15px 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0 0 0 10px;
+}
+
+.btn-navigation .btnContact p{
+    display: inline-block;
+    margin: 0 0 0 10px;
+} 
+
+ /*  Hero */
+
+header .hero{
+    display: flex;
+    margin: 3% 0;
+}
+
+.hero .discription , .hero .show {
+    position: relative;
+    width: 50%;
+}  
+
+.hero .show .photo{
+    height: 100%;
+    width: 100%;
+}
+
+.hero .show .photo img{
+    height: 100%;
+    width: 100%;
+    margin: -65px 0 0 0;
+}
+
+.hero .show .photo::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    height: 80%;
+    top: 57px;
+    left: 9%;
+    z-index: -1;
+    width: 91%;
+    background-color: var(--primary-color);
+}
+
+.hero .show .hot-spaciy{
+    width: 30%;
+    display: flex;
+    position: absolute;
+    font-weight: bold;
+    justify-content: center;
+    height: 6vh;
+    top: 110px;
+    left: -54px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 12px #00000014;
+}
+
+.hero .show .hot-spaciy a{
+    text-decoration: none;
+    color: red;
+}
+
+.hero .show .hot-spaciy::after{
+    content: "";
+    position: absolute;
+    height: 0vh;
+    z-index: 2;
+    top: 29px;
+    left: 90%;
+    transform: rotate(36deg);
+    border-bottom: 10px solid transparent;
+    border-top: 17px solid transparent;
+    border-right: 25px solid transparent;
+    border-left: 32px solid white;
+    z-index: 2;
+}
+
+.hero .show .meals > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero .show ul li a{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 5px 12px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px #958282;
+}
+
+.hero .show ul li a .meal-photo{
+    width: 50%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.hero .show ul li a .meal-photo img{
+    width: 100%;
+    height: 14vh;
+    border-radius: 5px;
+}
+
+.meals ul li .meal-discription{
+    width: -webkit-fill-available;
+}
+
+.meals ul li .meal-discription p{
+    margin: 4px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.meals ul li .meal-discription > ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.meals ul li .meal-discription > ul .gold-star{
+    color:gold;
+}
+
+.meals{
+    position: absolute;
+    width: 95%;
+    left: 8px;
+    bottom: -5px;
+}
+
+.hero .discription h1{
+    margin: 100px 0 0 0;
+    font-size: 50px;
+    height: 190px;
+    line-height: 1.5em;
+    color: black;
+}
+
+.hero .discription .sec-text{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: var(--secondry-font-color);
+}
+
+.hero .discription .Green-text{
+    color: var(--primary-color);
+}
+
+.buttons{
+    display: flex;
+    margin: 65px 0 0 0;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.buttons button{
+    padding: 15px 40px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    margin: 0 15px 0 0;
+}
+
+.buttons p{
+    margin: 18px 10px;
+    font-size: 25px;
+}
+
+.buttons .play-icon{
+    font-size: 25px;
+    box-shadow: 2px 3px 19px #a7a1a1;
+    border-radius: 50%;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+/* End Header */
+
+/* Start Main */
+
+/* Customer favorites */
+
+.customer-favorites{
+    margin: 10% 0;
+}
+
+.customer-favorites > p{
+    text-align: center;
+    color: red;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    text-transform: uppercase;
+}
+
+.customer-favorites > h1{
+    text-align: center;
+    font-size: 50px;
+    margin: 22px 0 45px 0;
+    color: black;
+}
+
+.customer-favorites > ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.customer-favorites > ul li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    width: 20%;
+    padding: 15px;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 12px #0055;
+}
+
+.customer-favorites > ul li p,
+.customer-favorites > ul li small{
+margin: 5px 0;
+}
+
+.customer-favorites > ul li .meal-img{
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+    padding: 30px;
+    background-color: #c1f1c6;
+}
+
+.customer-favorites > ul li .meal-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.customer-favorites > ul li small{
+    color: var(--secondry-font-color);
+}
+
+/* Special Dishes */
+
+.special-dishes{
+    margin: 4% 0;
+    position: relative;
+}
+
+.special-dishes > p {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.special-dishes > h1{
+    text-align: left;
+    margin: 30px 0;
+    line-height: 1.2;
+    display: inline-block;
+    font-size: 50px;
+    font-family: system-ui;
+    color: black;
+}
+
+.next-previous{
+    display: flex;
+    right: 0%;      
+    grid-gap: 2em;
+    top: 22%;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.special-dishes .left-link ,
+.special-dishes .right-link{
+    padding: 22px;
+    font-size: 20px;
+    float: right;
+    border-radius: 50%;
+    background-color: #efefef;
+    color: var(--secondry-font-color);
+    cursor: pointer;
+}
+
+.special-dishes .right-link{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.meals-slider{
+    display: flex;
+    overflow: hidden;
+    padding: 15px 5px;
+    grid-gap: 2em;
+    margin: 4% 0;
+}
+
+.meals-slider .inner{
+    display: flex;
+    grid-gap: 2em;
+    list-style: none;
+    transition: all 1s ease-in-out;
+}
+
+.meals-slider .inner .slide{
+    position: relative;
+    font-weight: bold;
+    width: 376px;
+    height: 410px;
+    padding: 25px 25px 10px 25px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 12px #0055;
+}
+
+.meals-slider .inner .slide .fattuoush-salad,
+.meals-slider .inner .slide .vegetable-salad,
+.meals-slider .inner .slide .egg-vegi-salad{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.meals-slider .inner .slide img{
+    width: 75%;
+    margin: 25px auto;
+}
+
+.meals-slider .inner .slide p,
+.meals-slider .inner .slide small{
+    margin: 5px 0;
+}
+
+.meals-slider .inner .slide small{
+    color: var(--secondry-font-color);
+}
+
+.meals-slider .inner .slide .fattuoush-salad .star-icon,
+.meals-slider .inner .slide .vegetable-salad .star-icon,
+.meals-slider .inner .slide .egg-vegi-salad .star-icon{
+    color: gold;
+}
+
+.meals-slider .inner .slide .fattuoush-salad .price-ratting,
+.meals-slider .inner .slide .vegetable-salad .price-ratting,
+.meals-slider .inner .slide .egg-vegi-salad .price-ratting{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meals-slider .inner .slide .fattuoush-salad .favorite .heart-icon,
+.meals-slider .inner .slide .vegetable-salad .favorite .heart-icon,
+.meals-slider .inner .slide .egg-vegi-salad  .favorite .heart-icon{
+    padding: 15px 20px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 0 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Testimonials */
+
+.testimonials{
+    position: relative;
+    margin: 4% 0;
+    display: flex;
+}
+
+.testimonials .chef-photo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials .chef-photo .smile-face ,
+.testimonials .chef-photo .pizza{
+    position: absolute;
+    font-size: 25px;
+}
+
+.testimonials .chef-photo .smile-face{
+    transform: rotate(-20deg);
+    left: 5%;
+    top: 60%;
+}
+
+.testimonials .chef-photo .pizza{
+    transform: rotate(70deg);
+    right: -3%;
+    top: 65%;
+}
+
+.testimonials .chef-photo .descripe{
+    position: absolute;
+    padding: 15px 20px;
+    font-weight: bold;
+    right: 10%;
+    bottom: 4%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px #0055;
+}
+
+.testimonials .chef-photo .descripe::before{
+    content: "";
+    position: absolute;
+    height: 0vh;
+    z-index: 2;
+    top: -37%;
+    left: -17%;
+    transform: rotate(218deg);
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 30px solid white;
+    z-index: 2;
+}
+
+
+.testimonials .chef-photo::before{
+    content: "";
+    position: absolute;
+    border-radius: 50% 50% 20% 20%;
+    height: 51%;
+    top: 39%;
+    left: 9%;
+    z-index: -1;
+    width: 91%;
+    background-color: var(--primary-color);
+}
+
+.img-continer{
+    width: 80%;
+    height: 90%;
+}
+
+.testimonials .chef-photo .img-continer img{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonials .customer-say > p{
+    color: red;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: left;
+} 
+
+.testimonials .customer-say > pre{
+    font-size: 45px;
+    margin: 30px 0 40px 0;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+} 
+
+.testimonials .customer-say > small{
+    font-size: 16px;
+    display: block;
+    color: var(--secondry-font-color);
+    margin: 15px 0 30px 0;
+} 
+
+.customer-say{
+    padding: 10%;
+}
+
+.customer-say .customer-feedback{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-say .customer-feedback .photos{
+    position: relative;
+    width: 400px;
+    height: 75px;
+}
+
+.customer-say .customer-feedback .photos img:nth-child(1){
+    height: 10vh;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    box-shadow: 0px 0px 12px #00000057;
+}
+
+.customer-say .customer-feedback .photos img:nth-child(2){
+    height: 10vh;
+    left: 20%;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0px 0px 12px #00000057;
+}
+
+.customer-say .customer-feedback .photos img:nth-child(3){
+    height: 10vh;
+    left: 40%;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    box-shadow: 0px 0px 12px #00000057;
+}
+
+.customer-say .customer-feedback .text{
+    width: 100%;
+}
+
+.customer-say .customer-feedback .text > p{
+    font-weight: bold;
+}
+
+.customer-say .customer-feedback .text small{
+    color: var(--secondry-font-color);
+}
+
+.customer-say .customer-feedback .text small .star-icon{
+    color: gold;
+}
+
+.customer-say .customer-feedback .text small span{
+    color: black;
+}
+
+/*  story-services */
+
+.story-services{
+    display: flex;
+    grid-gap: 2em;
+    margin: 5% 0;
+}
+
+.story-services .services {
+    width: 50%;
+    padding: 1% 1% 0 0;
+}
+
+.story-services .services > p{
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 5px;
+    font-weight: bold;
+    width: 50%;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+}
+
+.story-services .services > h1{
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    margin: 25px 0 35px 0;
+}
+
+.story-services .services > small{
+    color: var(--secondry-font-color);
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    margin: 15px 0 45px 0;
+    display: block;
+}
+
+.story-services .services > .btn{
+    padding: 20px 45px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--primary-color);
+}
+
+.boxes{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 1em;
+}
+
+.boxes .box{
+    padding: 15px;
+    border-radius: 20px;
+    height: 32vh;
+    width: 45%;
+    box-shadow: 0px 0px 12px #00000057;
+}
+
+.boxes .box > img{
+    height: 40%;
+    width: 100%;
+}
+
+.boxes .box > p{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin: 0 15px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.boxes .box > small{
+    color: var(--secondry-font-color);
+    font-size: 15px;
+    margin: 0 15px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+/* End Main */
+
+/* Start Footer */
+
+footer{
+    margin: 5% 0;
+    font-weight: bold;
+}
+.footer-continer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-continer .footer-brand{
+    width: 17%;
+}
+
+.footer-continer .footer-brand img{
+    height: 5vh;
+}
+
+.footer-continer .footer-brand p{
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 25px 0;
+    color: var(--secondry-font-color);
+}
+
+.footer-continer ul{
+    width: 100%;
+    list-style: none;
+}
+
+.footer-continer ul li{
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.footer-continer ul a{
+    text-decoration: none;
+    color: var(--secondry-font-color);
+}
+
+.copy-right{
+    display: flex;
+    margin: 4% 0;
+}
+
+.copy-right ul{
+    list-style: none;
+    width: 30%;
+} 
+
+.copy-right ul li{
+    margin: 0 15px 0 0;
+} 
+
+.copy-right .social-icon{
+    background-color: #edffef;
+    color: var(--secondry-font-color);
+    padding: 18px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.copy-right .facebook{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.copy-right ul{
+    display: flex;
+}
+
+.copy-right p{
+    text-align: left;
+    font-size: 12px;
+    font-size: 1em;
+    margin: 20px;
+    padding: 0 0 0 70px;
+    width: -webkit-fill-available;
+    color: var(--secondry-font-color);
+}
+
+
+
+
+/* End Footer */
