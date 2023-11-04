@@ -3,436 +3,683 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- -->
-    <title>Foodi | Resturent Website Landing Page</title>
-    <!-- -->
-    <meta name="keywords" content="food, resturent, plates, ">
-    <meta name="description" content="Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship">
-    <!-- -->
-    <meta name="twitter:card" content="Moahmmed Khaled bin-Hazim" />
-    <meta name="twitter:site" content="@[www.Mohammed.K2023.com]" />
-    <meta name="twitter:creator" content="@[Mohammed.K2023]" />
-    <!-- -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://[www.Mohammed-k77github.com].github.io/foodi" />
-    <meta property="og:site_name" content="Foodi">
-    <meta property="og:title" content="Resturent Website Landing Page" />
-    <meta property="og:description" content="Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship" />
-    <meta property="og:image" content="http://[Mohammed-k77].github.io/foodi/assets/images/[Moahmmed Khaled bin-Hazim]" />
-    <meta property="og:locale" content="en_US" />
 
-    <!-- -->
+    <!-- Links -->
 
-    <meta name="author" content="[Mohammed Khaled bin-Hazim]">
-    <!-- Linkes -->
-    
-    <!-- our project just needs Font Awesome Solid + Brands -->
-    <link href="../assets/lib/fontawesome-v6.4.2/css/fontawesome.css" rel="stylesheet">
-    <link href="../assets/lib/fontawesome-v6.4.2/css/brands.css" rel="stylesheet">
-    <link href="../assets/lib/fontawesome-v6.4.2/css/solid.css" rel="stylesheet">
-    <link href="../assets/lib/fontawesome-v6.4.2/css/regular.css" rel="stylesheet">
-
-    <!-- Main css file -->
-
-    <link href="../assets/css/ex18.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/lib/fontawesome-v6.4.2/css/all.css">
     <link rel="stylesheet" href="../assets/css/links.css">
+
+    <style>
+
+        .modal-center{
+            top: 30% !important;
+            transform: translateY(-50%) !important;
+        }
+
+        .action-icon{
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        table tr th:first-of-type{
+            width: 12%;
+        }
+
+        table tr th:last-of-type{
+            width: 20%;
+        }
+
+        table input[type="checkbox"]{
+            cursor: pointer;
+        }
+
+        .input-searsh{
+            position: relative;
+            display: inline-block;
+            width: 35%;
+        }
+
+        .searsh-icon{
+            position: absolute;
+            right: 2%;
+            font-size: 18px;
+            top: 26%;
+            color: lightgray;
+        }
+
+        .btn-dropdown-custom{
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        .plus-icon{
+            font-size: 15px;
+            margin-right: 10px;
+        }
+
+        .position-custom{
+            position: absolute;
+            right: 1%;
+            top: 2%;
+        }
+
+    </style>
+
+    <title>Document</title>
 </head>
 <body>
-    <div class="continer">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="../assets/img/Group20.svg">
-                </div>
-                <div class="links">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><select><option disabled selected>Menu</option></select></li>
-                        <li><select><option disabled selected>Services</option></select></li>
-                        <li><a href="#">Offers</a></li>
-                    </ul>
-                </div>
-                <div class="btn-navigation">
-                    <div class="searsh"><i class="fa fas fa-search searsh-icon"></i></div>
-                    <div class="cart"><i class="fa fa-bag-shopping cart-icon"></i></div>
-                    <button class="btnContact">
-                        <i class="fa-solid fa-phone-volume"></i> 
-                        <p>Contact</p>
-                    </button>
-                </div>
-            </nav>
-            <div class="hero">
-                <div class="discription">
-                    <h1><pre>Dive into Delights 
-of Delectable <span class="Green-text">Food</span>
-                    </pre>    
-                    </h1><pre class="sec-text">Where Each Plate Weaves a Story of Culinary
-Mastery and passionate Craftsmanship</pre>
-                        <div class="buttons">
-                            <button>Order Now</button>
-                            <p>Watch Video</p>
-                            <i class="fa-solid fas fa-play play-icon"></i>
-                        </div>
-                </div>
-                <div class="show">
-                    <div class="hot-spaciy"><a href="#">Hot spaciy Food 🌶️</a></div>
-                    <div class="photo">
-                        <img src="../assets/img/Intersect.png">
-                    </div>
-                    <div class="meals">
-                        <ul>
-                            <li><a href="#">
-                                <div class="meal-photo"><img src="../assets/img/image13.png" alt="loadding"></div>
-                                <div class="meal-discription">
-                                    <p>Spicy noodles</p>
-                                    <ul>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa far fa-star"></i></li>
-                                        <li><i class="fa far fa-star"></i></li>
-                                    </ul>
-                                    <p><span style="color: red;">$</span>18.00</p>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="meal-photo"><img src="../assets/img/image13.png" alt="loadding"></div>
-                                <div class="meal-discription">
-                                    <p>Vegetarian salad</p>
-                                    <ul>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa-solid fa-star gold-star"></i></li>
-                                        <li><i class="fa far fa-star"></i></li>
-                                    </ul>
-                                    <p><span style="color: red;">$</span>23.00</p>
-                                </div>
-                            </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section>
-                <div class="customer-favorites">
-                    <p>customer favorites</p>
-                    <h1>Popular catagories</h1>
-                    <ul>
-                        <li>
-                            <div class="meal-img">
-                                <img src="../assets/img/pngwing4.png" alt="Loadding">
-                            </div>
-                            <p>Main Dish</p>
-                            <small>(86 dishes)</small>
-                        </li>
-                        <li>
-                            <div class="meal-img">
-                                <img src="../assets/img/pngwing6.png" alt="Loadding">
-                            </div>                       
-                            <p>Break Fast</p>
-                            <small>(12 break fast)</small>
-                        </li>
-                        <li>
-                            <div class="meal-img">
-                                <img src="../assets/img/pngwing3.png" alt="Loadding">
-                            </div>
-                            <p>Dessert</p>
-                            <small>(48 dessert)</small>
-                        </li>
-                        <li>
-                            <div class="meal-img">
-                                <img src="../assets/img/pngwing7.png" alt="Loadding">
-                            </div>
-                            <p>Browse All</p>
-                            <small>(255 Items)</small>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section>
-                <div class="special-dishes">
-                    <p>special dishes</p>
-                    <h1><pre>Standout Dishes
-From Our Menu</pre></h1>
-                    <div class="next-previous">
-                        <i onclick="previousSlide()" class="fa-solid fa-chevron-left left-link"></i>
-                        <i onclick="nextSlide()" class="fa-solid fa-chevron-right right-link"></i>
-                    </div>
-                    <div class="meals-slider">
-                        <div class="inner">
-                            <div class="slide">
-                                <div class="fattuoush-salad">
-                                    <div class="favorite"><i class="fa-solid fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Fattoush salad.png" alt="loadding">
-                                    <p>Fattoush salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>24.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.9</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="vegetable-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Vegetable salad.png" alt="loadding">
-                                    <p>Vegetable Salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>26.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.6</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="egg-vegi-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Eggsalad.png" alt="loadding">
-                                    <p>Egg vegi salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                    <p><span style="color: red;">$</span>24.00</p>
-                                    <small><i class="fa fa-star star-icon"></i>4.5</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="fattuoush-salad">
-                                    <div class="favorite"><i class="fa-solid fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Fattoush salad.png" alt="loadding">
-                                    <p>Fattoush salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>24.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.9</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="vegetable-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Vegetable salad.png" alt="loadding">
-                                    <p>Vegetable Salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>26.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.6</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="egg-vegi-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Eggsalad.png" alt="loadding">
-                                    <p>Egg vegi salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                    <p><span style="color: red;">$</span>24.00</p>
-                                    <small><i class="fa fa-star star-icon"></i>4.5</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="fattuoush-salad">
-                                    <div class="favorite"><i class="fa-solid fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Fattoush salad.png" alt="loadding">
-                                    <p>Fattoush salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>24.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.9</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="vegetable-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Vegetable salad.png" alt="loadding">
-                                    <p>Vegetable Salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                        <p><span style="color: red;">$</span>26.00</p>
-                                        <small><i class="fa fa-star star-icon"></i>4.6</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="egg-vegi-salad">
-                                    <div class="favorite"><i class="fa-regular fa-heart heart-icon"></i></div>
-                                    <img src="../assets/img/Eggsalad.png" alt="loadding">
-                                    <p>Egg vegi salad</p>
-                                    <small>description of the item</small>
-                                    <div class="price-ratting">
-                                    <p><span style="color: red;">$</span>24.00</p>
-                                    <small><i class="fa fa-star star-icon"></i>4.5</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="testimonials">
-                    <div class="chef-photo">
-                        <p class="smile-face">😊</p>
-                        <p class="pizza">🍕</p>
-                        <div class="img-continer">
-                            <img src="../assets/img/pngwing 2.png" alt="Loadding">
-                        </div>
-                        <p class="descripe">Our Beast Chef 😁</p>
-                    </div>
-                    <div class="customer-say">
-                        <p>testimonials</p>
-<pre>What Our Customers
- Say About Us</pre>
-                    <small>
-                        "I had the pleasure of dining at Foodi last night
-                        and I'm still raving about the experiencel The attention 
-                        to detail in presentation and service was impeccable"
-                    </small>
-                    <div class="customer-feedback">
-                        <div class="photos">
-                            <img src="../assets/img/10.png" alt="loadding">
-                            <img src="../assets/img/12.png" alt="loadding">
-                            <img src="../assets/img/11.png" alt="loadding">
-                        </div>
-                        <div class="text">
-                            <p>Customer Feedback</p>
-                            <small><i class="fa fa-star star-icon"></i><span> 4.9 </span> (18.6k Reviews)</small>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="story-services">
-                    <div class="services">
-                        <p>Our story & services</p>
-                        <h1>Our Culinary Journey And Services</h1>
-                        <small>Rooted in passion , we curate unforgettable
-                            dining experienes and offer exceptional services,
-                            blening culinary artistry with warm hospitaliy.
-                        </small>
-                        <button class="btn">Explore</button>
-                    </div>
-                    <div class="boxes">
-                        <div class="box">
-                            <img src="../assets/img/fi-rr-salad.svg" alt="Loadding">
-                            <p>Catering</p>
-                            <small>Delight your guests with our flavors nad presentation</small>
-                        </div>
-                        <div class="box">
-                            <img src="../assets/img/fi-rr-time-fast.svg" alt="Loadding">
-                            <p>Fast Delivery</p>
-                            <small>We deliver your order promptly to your door</small>
-                        </div>
-                        <div class="box">
-                            <img src="../assets/img/fi-rr-shopping-cart-check.svg" alt="Loadding">
-                            <p>Online Ordering</p>
-                            <small>Explore menu & order with ease using our Online Ordering </small>
-                        </div>
-                        <div class="box">
-                            <img src="../assets/img/fi-rr-gift.svg" alt="Loadding">
-                            <p>Gift cards</p>
-                            <small>Gie the gift of exceptional dining with Foodi gift Cards</small>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div style="position: relative;" class="container">
 
-        </main>
-        <footer>
-            <div class="footer-continer">
-                <div class="footer-brand">
-                    <img src="../assets/img/Group20.svg" alt="Loadding">
-                    <p>Save the artistry where every dish is a culinary masterpiece</p>
-                </div>
-                <div class="useful-links">
-                    <h3>Useful links</h3>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">blogs</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="main-menu">
-                    <h3>Main Menu</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Offers</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Reservation</a></li>
-                    </ul>
-                </div>  
-                <div class="contact">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><a href="#">Occ716528@gmail.com</a></li>
-                        <li><a href="#">+967 770485277</a></li>
-                        <li><a href="#">Social media</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copy-right">
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f social-icon facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fab fa-instagram social-icon"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-x-twitter social-icon"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube social-icon"></i></a></li>
-                    </ul>
-                    <p>Copyright&copy; 2023 Mohammed Khaled bin-Hazim | All rights reserved</p>               
-            </div>
-        </footer>
-    </div>
 
-    <div class="links-continer">
-        <a href="../index.html"><i class="fa fas fa-home home-icon"></i></a>
-        <div class="left-right">
-            <i onclick="nextLink()" onclick="privuosLink()" class="fa-solid fa-chevron-left left-link"></i> 
-            <i onclick="privuosLink()" class="fa-solid fa-chevron-right right-link"></i> 
+        <!--#region Add Modal -->
+
+        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete !!</h5>
+                <button type="button" class="close btn-close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <input class="ms-2 rounded" type="text" placeholder="First Name">
+                    <input class="ms-2 rounded" type="text" placeholder="Last Name">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close-modal"> Close</button>
+                <button id="btn-add" type="button" class="btn btn-success">Add</button>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="page-links">
-            <ul>
-                <li><a href="../pages/ex1/Home.html">1</a></li>
-                <li><a href="../pages/ex2.html">2</a></li>
-                <li><a href="../pages/ex3.html">3</a></li>
-                <li><a href="../pages/ex4.html">4</a></li>
-                <li><a href="../pages/ex5.html">5</a></li>
-                <li><a href="../pages/ex6.html">6</a></li>
-                <li><a href="../pages/ex7.html">7</a></li>
-                <li><a href="../pages/ex8.html">8</a></li>
-                <li><a href="../pages/ex9.html">9</a></li>
-                <li><a href="../pages/ex10.html">10</a></li>
-                <li><a href="../pages/ex11.html">11</a></li>
-                <li><a href="../pages/ex12.html">12</a></li>
-                <li><a href="../pages/ex13.html">13</a></li>
-                <li><a href="../pages/ex14.html">14</a></li>
-                <li><a href="../pages/ex15.html">15</a></li>
-                <li><a href="../pages/ex16.html">16</a></li>
-                <li><a href="../pages/ex17.html">17</a></li>
-                <li><a href="../pages/ex18.html">18</a></li>
-                <li><a href="../pages/ex19.html">19</a></li>
-                <li><a href="../pages/ex20.html">20</a></li>
-                <li><a href="../pages/ex21.html">21</a></li>
-                <li><a href="../pages/ex22.html">22</a></li>
-                <li><a href="../pages/ex23.html">23</a></li>
-                <li><a href="../pages/ex24.html">24</a></li>
-                <li><a href="../pages/ex25.html">25</a></li>
-                <li><a href="../pages/ex26.html">26</a></li>
-                <li><a href="../pages/ex27.html">27</a></li>
-                <li><a href="../pages/ex28.html">28</a></li>
-                <li><a href="#">29</a></li>
-                <li><a href="#">30</a></li>
-            </ul>
+
+        <!--#endregion Add Modal -->
+
+        <!--#region Details Modal -->
+
+        <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete !!</h5>
+                <button type="button" class="close btn-close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label">First name<input class="ms-2 rounded" readonly type="text" placeholder="First Name"></label>
+                    <label class="form-label">Last name<input class="ms-2 rounded" readonly type="text" placeholder="Last Name"></label>                
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close-modal"> Close</button>
+                </div>
+            </div>
+            </div>
         </div>
-    </div>
+
+        <!--#endregion Details Modal -->
+
+        <!--#region Edit Modal -->
+
+        <div class="modal fade" id="e-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit register</h5>
+                <button type="button" class="close btn-close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <input class="ms-2 rounded" type="text">
+                    <input class="ms-2 rounded" type="text">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close-modal"> Close</button>
+                <button id="btn-edit" type="button" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--#endregion Edit Modal -->
+
+        <!--#region Delete Modal -->
+        <div class="modal fade" id="d-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete !!</h5>
+                <button type="button" class="close btn-close-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Are you shure about that you i,ll delete this registered 
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close-modal"> Close</button>
+                <button id="btn-delete" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--#endregion Delete Modal -->
     
-    <script src="../../assets/lib/fontawesome-v6.4.2/js/all.js"></script>
+        <div class="input-searsh mt-3 mb-3">
+            <input class="form-control" type="text" id="searsh-input" onkeyup="Searsh()" placeholder="Inser name to searsh ....">
+            <i class="fa-solid fa-magnifying-glass searsh-icon"></i>
+        </div>
+        <div class="dropdown position-custom">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Actions
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="addRegister()" class="btn btn-success btn-dropdown-custom"><i class="fa fas fa-plus plus-icon"></i>Add New</button></li>
+              <li><button onclick="DeleteSelected()" class="btn btn-danger btn-dropdown-custom">Delete Selected</button></li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        <table class="table table-responsive table-dark table-bordered table-striped mt-3 mb-3 text-center">
+            <tr>
+                <th>
+                    <label class="form-label"><input onchange="selectAll()" style="margin-right: 5px;" class="form-check-input" type="checkbox"> Select All</label>
+                </th>
+                <th>
+                    First Name 
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input" type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                    <td>
+                        <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                        <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                        <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                    </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Mohammed 
+                </td>
+                <td>
+                    Ben Haziem
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Ali 
+                </td>
+                <td>
+                    bin-shraf
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="form-check-input"  type="checkbox"></td>
+                <td>
+                    Saeed 
+                </td>
+                <td>
+                    ba-alei
+                </th>
+                <td>
+                    <button onclick="editConfirm(this)" class="btn btn-info"><i class="fa-regular fa-pen-to-square action-icon"></i></button>
+                    <button onclick="showDetails(this)" class="btn btn-primary"><i class="fa-solid fa-file-contract action-icon"></i></button>
+                    <button onclick="deleteConfirm(this)" class="btn btn-danger"><i class="fa-solid fa-trash-can action-icon"></i></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+        //#region Some notic
+        // table.deleteRow(index) this function is reqiuare pass index of row as number 
+        // row.rowIndex this function git the index of the row if you have it as object
+        // row.remove  this function is used to delete row if you git it as object
+        // model in pootstrap can you hanel it by js but requaire jquery
+        //#endregion Some notic
+
+        //#region Searsh 
+
+        function Searsh() {
+            let input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searsh-input");
+            filter = input.value.toUpperCase();
+            table = document.getElementsByTagName('table')[0];
+            tr = table.querySelectorAll('table tr:not(:first-of-type)');
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                }
+            }
+        }
+
+        //#endregion Searsh 
+        
+        //#region Add
+
+        function addRegister(){
+            const btnAdd = document.getElementById('btn-add');
+            const Closebuttons = document.querySelectorAll('.btn-close-modal');
+            const table = document.getElementsByTagName('table')[0];
+            $('#add-modal').modal('show');
+
+            btnAdd.addEventListener('click', function (){
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                let td4 = document.createElement('td');
+                let checkbox = document.createElement('input');
+                checkbox.type = "checkbox";
+                let btnEdit = document.createElement('button');
+                let btnDetial = document.createElement('button');
+                let btnDelete = document.createElement('button');
+                checkbox.classList.add('form-check-input'); 
+                btnEdit.classList.add('btn','btn-info','me-1');
+                let iconEdit = document.createElement('i');
+                iconEdit.classList.add('fa-regular', 'fa-pen-to-square', 'action-icon');
+                btnEdit.appendChild(iconEdit);
+                btnEdit.onclick=function() {
+                    editConfirm(this);
+                };
+                btnDetial.classList.add('btn','btn-primary','me-1');
+                let iconDetial = document.createElement('i');
+                iconDetial.classList.add('fa-solid','fa-file-contract','action-icon');
+                btnDetial.appendChild(iconDetial);
+                btnDetial.onclick=function() {
+                    showDetails(this);
+                };
+                btnDelete.classList.add('btn','btn-danger');
+                let iconDelete = document.createElement('i');
+                iconDelete.classList.add('fa-solid', 'fa-trash-can', 'action-icon');
+                btnDelete.appendChild(iconDelete);
+                btnDelete.onclick=function() {
+                    deleteConfirm(this);
+                };
+                td1.appendChild(checkbox);
+                td2.innerText = document.getElementById('add-modal').querySelectorAll('input')[0].value;
+                td3.innerText = document.getElementById('add-modal').querySelectorAll('input')[1].value;
+                td4.appendChild(btnEdit);
+                td4.appendChild(btnDetial);
+                td4.appendChild(btnDelete);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                table.querySelectorAll('tbody')[0].appendChild(tr);
+                $('#add-modal').modal('hide');
+            })
+
+            Closebuttons.forEach(function(btnClose){
+                btnClose.addEventListener('click', function (){
+                $('#add-modal').modal('hide');
+            });
+            });
+        }
+
+        //#endregion Add
+
+        //#region Details
+
+        function showDetails(button){
+            const Closebuttons = document.querySelectorAll('.btn-close-modal');
+            let row = button.parentNode.parentNode;
+            document.getElementById('details-modal').querySelectorAll('input[type="text"]')[0].value=row.querySelectorAll('td')[1].innerText;
+            document.getElementById('details-modal').querySelectorAll('input[type="text"]')[1].value=row.querySelectorAll('td')[2].innerText;
+            $('#details-modal').modal('show'); 
+        
+            Closebuttons.forEach(function(btnClose){
+                btnClose.addEventListener('click', function (){
+                $('#details-modal').modal('hide');
+            });
+            });
+        }
+
+        //#endregion Details
+
+        //#region Edit
+
+        function editConfirm(button){
+            const btnEdit = document.getElementById('btn-edit');
+            const Closebuttons = document.querySelectorAll('.btn-close-modal');
+            let row = button.parentNode.parentNode;
+            document.getElementById('e-modal').querySelectorAll('input[type="text"]')[0].value=row.querySelectorAll('td')[1].innerText;
+            document.getElementById('e-modal').querySelectorAll('input[type="text"]')[1].value=row.querySelectorAll('td')[2].innerText;
+            $('#e-modal').modal('show'); 
+        
+            Closebuttons.forEach(function(btnClose){
+                btnClose.addEventListener('click', function (){
+                $('#e-modal').modal('hide');
+            });
+            });
+
+            btnEdit.addEventListener('click', function (){
+                row.querySelectorAll('td')[1].innerText=document.getElementById('e-modal').querySelectorAll('input[type="text"]')[0].value;
+                row.querySelectorAll('td')[2].innerText=document.getElementById('e-modal').querySelectorAll('input[type="text"]')[1].value;
+                $('#e-modal').modal('hide');
+            })
+
+        }
+
+
+        //#endregion Edit
+
+        //#region Delete 
+
+        //#region Delete one register
+        
+        function deleteConfirm(button){     
+            $('#d-modal').modal('show'); 
+            const btnDelete = document.getElementById('btn-delete');
+            const Closebuttons = document.querySelectorAll('.btn-close-modal');
+            
+            Closebuttons.forEach(function(btnClose){
+                btnClose.addEventListener('click', function (){
+                $('#d-modal').modal('hide');
+            });
+            });
+
+            btnDelete.addEventListener('click', function (){
+                let table = document.getElementsByTagName('table')[0];
+                let row = button.parentNode.parentNode;
+                row.remove();
+                $('#d-modal').modal('hide');
+            })
+        }
+
+        //#endregion 
+
+        //#region Delete Multi register
+
+        function DeleteSelected(){
+            $('#d-modal').modal('show'); 
+            const btnDelete = document.getElementById('btn-delete');
+            const Closebuttons = document.querySelectorAll('.btn-close-modal');
+            
+            Closebuttons.forEach(function(btnClose){
+                btnClose.addEventListener('click', function (){
+                $('#d-modal').modal('hide');
+            });
+            });
+
+            btnDelete.addEventListener('click', function (){
+                let table = document.getElementsByTagName('table')[0];
+                var checkboxes = document.querySelectorAll('td input[type="checkbox"]:checked');
+                checkboxes.forEach(function (checkbox) {
+                let row = checkbox.closest('tr');
+                row.remove();
+                });
+                $('#d-modal').modal('hide');
+                var seletAllcheckbox = document.querySelectorAll('th input[type="checkbox"]:checked')[0];
+                seletAllcheckbox.checked=false;
+            })
+        }
+
+        //#endregion Delete Multi register
+
+        //#endregion Delete 
+        
+        //#region selectAll
+
+        function selectAll() {
+            let selectAllCheckbox = document.querySelector('table tr:first-of-type th:first-of-type input[type="checkbox"]');
+            if(selectAllCheckbox.checked==true){
+                let checkboxes = document.querySelectorAll('table tr td input[type="checkbox"]');  
+                checkboxes.forEach(function(checkbox) {
+                checkbox.checked = true;
+            });
+            } 
+            else{
+                let checkboxes = document.querySelectorAll('table tr td input[type="checkbox"]');  
+                checkboxes.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });  
+            }
+        }
+        //#endregion selectAll
+
+    </script>
+
+    <script src="../assets/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/lib/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/links.js"></script>
-    <script src="../assets/js/ex18.js"></script>
 </body>
 </html>

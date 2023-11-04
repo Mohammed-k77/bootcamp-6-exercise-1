@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/lib/bootstrap.min.css?c=3">
+    <link rel="stylesheet" href="..//assets/lib/fontawesome-v6.4.2/css/all.css">
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <style>       
+        body{
+            background-color: #EFEDDF;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        nav{
+            width: 100%;
+            background: #FFF;
+            border-bottom: 1px solid #CCC;
+            position: fixed;
+            top: 0;
+            padding: 20px;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            float: right;
+            grid-gap: 1rem;
+            margin-top: 0.7%;
+        }
+
+        nav ul li a{
+            color: #666;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:active{
+            color: #39D1B4;
+            transition: all 0.3s;
+        }
+
+        nav h1{
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #666;
+            background: url(../assets/img/logo.png) no-repeat top left;
+            background-size: 30px;
+            padding: 2px;
+            padding-left: 35px;
+            float: left;
+            transition: all 0.3s;
+        }
+
+        nav h1 a:link , nav h1 a:visited{
+            color: #666;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        nav h1 a:hover{
+            color: #CCC;
+            transition: all 0.3s;
+        }
+
+        main{
+            height: 100vh;
+            width: 100%;
+            padding: 12% 0 0 0;
+        }
+
+        .create-task input{
+            height: 5rem;
+            padding: 10px;
+            border-radius: 1vw 0 0 1vw;
+            border: 1px solid #666;
+            border-radius: none;
+            border-right: none;
+            width: 79%;
+        }
+
+        .create-task input:focus{
+            outline: 2px solid #F0553B;
+            border: none;
+            margin: 2px 0 0 0;
+            font-size: 1.5rem;
+            height: 4.78rem;
+        }
+
+        ::placeholder{
+            color: #666;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .create-task button{
+            color: white;
+            height: 5rem;
+            font-size: 1.9vw;
+            width: 13vw;
+            border-radius: 0 1vw 1vw 0;
+            border: none;
+            background-color: #F0553B;
+        }
+
+        .no-list img{
+            height: 20vh;
+            width: 12vw;
+        }
+
+        .no-list h4{
+            color: #666;
+        }
+
+        .today-tasks h4{
+            text-align: center;
+            color: #1f1f1f;
+            margin: 2rem;
+        }
+
+        .today-tasks hr{
+            height: 0.1rem;
+            background-color: #666;
+        }
+
+        .today-tasks ul{
+            margin: 2rem 0 5rem 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            grid-gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+
+
+        .today-tasks ul li{
+            width: 49%;
+            cursor: pointer;
+            border-top: 0.9rem solid #39D1B4;
+            background-color: white;
+            padding: 1.5rem 5.5rem 1.5rem 1.5rem;
+        }
+
+        .today-tasks ul .mark-compelte{
+            width: 49%;
+            cursor: pointer;
+            border-top: 0.9rem solid #666;
+            background-color: white;
+            background-image: url(../assets/img/complete.png);
+            background-repeat: no-repeat;
+            background-position: 23rem center;
+            opacity: 0.5; 
+            text-decoration: line-through;
+            background-size: 9vh;
+            padding: 1.5rem 5.5rem 1.5rem 1.5rem;
+        }
+
+        .today-tasks ul .mark-compelte:hover{
+            border-top: 0.9rem solid #39D1B4;
+            opacity: 1; 
+            transition: all 0.5s ease-in;
+        }
+
+        .today-tasks ul li:hover{
+            border-top: 0.9rem solid #F0553B;
+            transition: all 0.5s ease-in;
+        }
+
+        .today-tasks .note{
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e4e3d5;
+            border: 1px solid #666;
+        }
+
+        .today-tasks .note button{
+            text-transform: uppercase;
+            border: 1px solid;
+            color: #666;
+            margin: 1rem;
+            padding: 0.5rem 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .today-tasks .note button:hover{
+            border: 1px solid #F0553B;
+            color: #F0553B;
+            transition: all 0.5s ease-in;
+        }
+
+        .move-right{
+            animation: move-right 0.5s linear;
+        }
+
+        .move-left{
+            animation: move-left 0.5s linear;
+        }
+
+        @keyframes move-right {
+            0%{
+                transform: translateX(0rem);
+                opacity: 0.5;
+            }
+
+            0%{
+                transform: translateX(20rem);
+                opacity: 0.5;
+            }
+
+            100%{
+                transform: translateX(30rem);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes move-left {
+            0%{
+                transform: translateX(0rem);
+                opacity: 0.5;
+            }
+
+            0%{
+                transform: translateX(-20rem);
+                opacity: 0.5;
+            }
+
+            100%{
+                transform: translateX(-30rem);
+                opacity: 0.3;
+            }
+        }
+
+    </style>
+
+    <title>Daily tasks</title>
+</head>
+<body>
+    <nav>
+        <h1><a href="#">Listrr</a></h1>
+        <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Log out</a></li>
+        </ul>
+    </nav>
+    <main class="d-flex flex-column align-items-center">
+        <div class="col-10">
+        <section>
+            <div class="row mx-0 justify-content-center create-task">
+                <input class="text-upper-case fw-b" placeholder="Insert your List item here" type="text" >
+                <button class="text-upper-case">Create List</button>
+            </div> 
+        </section>
+        <section>
+            <div class="row mx-0 my-5 justify-content-center">
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="text-center text-upper-case text-align-center my-3">No list yet</h4>
+                    <img src="../assets/img/logo2.png" alt="Loodding">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row mx-0 my-5 justify-content-center today-tasks">
+                <div class="col-10">
+                    <h4 class="text-upper-case">to day tasks</h4>
+                    <hr>
+                    <ul></ul>
+                    <div class="note">
+                        <h5><pre>**SINGLE CLICK TO MARK COMPLETE    **DOUBLE CLICK TO REMOVE FROM LIST</pre></h5>
+                        <button>clear all tasks</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="../assets/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/links.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            let noTaskSection = $('main').find('section').eq(1).css({"display":"block"});
+            let taskSection = $('main').find('section').eq(2).css({"display":"none"});
+            let ulTasks = taskSection.find('ul').eq(0);
+
+            $('.create-task').find('button').eq(0).on('click',function(){
+                if($('.create-task').find('input').eq(0).val() !=''){
+                    let newTask = $('<li>');
+                    newTask.on('click',function(){
+                        newTask.toggleClass('mark-compelte');
+                    })
+                    newTask.dblclick(function(){
+                        this.remove();
+                        checkIfthereTask();
+                    })
+                    newTask.html($('.create-task').find('input').eq(0).val()); 
+                    ulTasks.append(newTask);
+                    $('.create-task').find('input').eq(0).val('');
+                    if(ulTasks.children.length>0){
+                        noTaskSection.find('h4').addClass('move-right');
+                        noTaskSection.find('img').addClass('move-left');
+                        noTaskSection.find('h4').css('transform','translateX(30rem)');
+                        noTaskSection.find('img').css('transform','translateX(-30rem)');
+                        noTaskSection.fadeOut(500);
+                        setTimeout(function(){
+                            taskSection.slideDown(500);
+                            noTaskSection.find('h4').removeClass('move-right');
+                        noTaskSection.find('img').removeClass('move-left');
+                        },500);
+                    }
+                }
+
+                else alert('Please Add Task ')
+                
+            }); 
+
+            function checkIfthereTask(){
+                let c = ulTasks.children('li').length;
+                if(!ulTasks.children('li').length>0){
+                    taskSection.fadeOut(500);
+                    noTaskSection.fadeIn(500);
+                    noTaskSection.find('h4').addClass('move-left').css("animation","move-left 0.5s linear reverse");
+                    noTaskSection.find('img').addClass('move-right').css("animation","move-right 0.5s linear reverse");
+                    setTimeout(function(){
+                        noTaskSection.find('h4').css('transform','translateX(0rem)');
+                        noTaskSection.find('img').css('transform','translateX(0rem)');
+                        noTaskSection.find('h4').removeClass('move-left');
+                        noTaskSection.find('img').removeClass('move-right');
+                    },500);
+                }
+            }
+       
+            $('.today-tasks').find('button').on('click', function() {
+                let leftSideTasks = $('section ul li:nth-child(2n-1)');
+                let rightSideTasks = $('section ul li:nth-child(2n)');
+                
+                leftSideTasks.each(function() {
+                    let task = $(this);
+                    task.addClass('move-left');
+                    setTimeout(function(){
+                        task.remove();
+                    }, 500);
+                });
+                
+                rightSideTasks.each(function() {
+                    let task = $(this);
+                    task.addClass('move-right');
+                    setTimeout(function(){
+                        task.remove();
+                    }, 500);
+                });
+                
+                taskSection.fadeOut(500);
+                noTaskSection.fadeIn(500);
+                
+                noTaskSection.find('h4').addClass('move-left').css("animation", "move-left 0.5s linear reverse");
+                noTaskSection.find('img').addClass('move-right').css("animation", "move-right 0.5s linear reverse");
+                
+                setTimeout(function(){
+                    noTaskSection.find('h4').css('transform', 'translateX(0rem)');
+                    noTaskSection.find('img').css('transform', 'translateX(0rem)');
+                    noTaskSection.find('h4').removeClass('move-left');
+                    noTaskSection.find('img').removeClass('move-right');
+                }, 500);
+            });
+        });     
+    </script>
+
+</body>
+</html>

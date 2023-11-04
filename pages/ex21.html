@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/lib/bootstrap.min.css?c=3">
+    <link rel="stylesheet" href="..//assets/lib/fontawesome-v6.4.2/css/all.css">
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <title>Chat</title>
+    <style>    
+        body{
+           background-color: #F5F5DC;
+           font-weight: bold;
+        }
+
+        .continer{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            bottom: 10%;
+            position: absolute;
+            width: 34%;
+            height: 85%;
+            right: 27%;
+        }
+
+        .current-chat{
+            width: 100%;
+            z-index: 2;
+            overflow: hidden;
+            box-shadow: 0px 0px 13px #00000029;
+            border-radius: 15px;
+        }
+
+        .header{
+            display: flex;
+            background-color: white;
+            justify-content: left;
+            grid-gap: 1em;
+            box-shadow: 1px 1px 15px #00000030;
+            align-items: center;
+        }
+
+        .imgContiner{
+            padding: 3%;
+            width: 15%;
+        }
+
+        .imgContiner img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .name{
+            text-align: center;
+        }   
+
+        .name h3{
+            font-family: math;
+            margin: 10px 0 0 0;
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        
+        .name p{
+            color: #9d9d9e;
+            text-align: left;
+            margin: 5px 0 11px 0;
+        }   
+
+        .chat{
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background-color: #f7f7f7;
+            height: 425px;
+        }
+
+        .date{
+            text-align: center;
+            color: #9d9d9e;
+            font-size: 14px;
+            background-color: #ededed;
+            margin: 16px 107px;
+            padding: 5px 5px;
+            border-radius: 15px;
+        }
+
+        .white p , .white h3{
+            margin: 0;
+        }
+
+        .white{
+            padding: 15px;
+            background-color: white;
+            float: left;
+            clear: both;
+            width: fit-content;
+            margin: 8px 38px 8px 10px;
+            color: #333333;
+            border-radius: 20px 20px 20px 0;
+        }
+
+        .black p , .black h3{
+            margin: 0;
+        }
+
+        .black{
+            padding: 15px 15px 15px 15px;
+            background-color: #333333;
+            float: right;
+            clear: both;
+            width: fit-content;
+            margin: 8px 10px 8px 38px;
+            color: white;
+            border-radius: 20px 20px 0 20px; 
+        }
+
+        .black , .white{
+            box-shadow: 0px 0px 15px #e7e7e7;
+        }
+
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px;
+            background-color: white;
+            box-shadow: 1px 1px 15px #00000030;
+        }
+
+        .inputfild input{
+            border: none;
+            width: 398px;
+            border-radius: 10px;
+            color: #666667;
+            outline: 1px solid lightgray;
+            box-shadow: 1px 1px 15px #00000030;
+            padding: 15px 15px;
+            width: 240px;
+        }
+        
+        .myIcon{
+            font-size: 20px;
+            color:#666667;
+            cursor: pointer;
+        }
+
+        .myIcon:hover{
+            transform: scale(1.2);
+            color:#000;
+        }
+
+        .contacts{
+            position: absolute;
+            top: 9%;
+            left: -17%;
+            background-color: #f6f6f6;
+            z-index: 1;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0px 0px 13px #00000029;
+            border-radius: 15px;
+            transition: all 0.5s linear;
+        }
+
+        .contacts:hover , .contacts:focus{
+            transform: translateX(-53%);
+        }
+
+        .contacts .contact-head{
+            display: flex;
+            grid-gap: 1em;
+            padding: 0 15px;
+        }
+
+        .contacts .contact-head .contact-icon{
+            font-size: 25px;
+            padding: 20px;
+            color: #666667;
+        }
+
+        .contacts .contact-head p{
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .contacts ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contacts ul li{
+            display: flex;
+            grid-gap: 1em;
+        }
+
+        .contacts ul li .img-continer{
+            width: 15%;
+            height: 17%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .contacts ul li .img-continer img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 13px #00000029;
+        }
+
+        .contacts ul li .descripe{
+            text-align: left;
+            font-weight: bold;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .contacts ul li .descripe P:first-of-type{
+            font-size: 12px;
+            margin: 10px 0;
+            color: #333333;
+        }
+
+        .contacts ul li .descripe P:last-of-type{
+            font-size: 12px;
+            color: #666667;
+        }
+
+
+        .contacts ul li:nth-of-type(1) .img-continer::after{
+            content: "5";
+            position: absolute;
+            color: white;
+            width: 19px;
+            right: 5%;
+            top: 5%;
+            font-weight: 500;
+            height: 24px;
+            background-color: #9d9d9e;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .contacts ul li:nth-of-type(2) .img-continer::after{
+            content: "3";
+            position: absolute;
+            color: white;
+            width: 19px;
+            right: 5%;
+            top: 5%;
+            font-weight: 500;
+            height: 24px;
+            background-color: #9d9d9e;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .contacts ul li:nth-of-type(3) .img-continer::after{
+            content: "1";
+            position: absolute;
+            color: white;
+            width: 19px;
+            right: 5%;
+            top: 5%;
+            font-weight: 500;
+            height: 24px;
+            background-color: #9d9d9e;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .contacts ul li:nth-of-type(4) .img-continer::after{
+            content: "6";
+            position: absolute;
+            color: white;
+            width: 19px;
+            right: 5%;
+            top: 5%;
+            font-weight: 500;
+            height: 24px;
+            background-color: #9d9d9e;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .contacts ul li:nth-of-type(5) .img-continer::after{
+            content: "3";
+            position: absolute;
+            color: white;
+            width: 19px;
+            right: 5%;
+            top: 5%;
+            font-weight: 500;
+            height: 24px;
+            background-color: #9d9d9e;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .pop{
+            height: 70px;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            box-shadow: 0px 0px 11px black;
+            background-color: #333333;
+            color: white;
+            border-radius: 50%;
+            right: 25%;
+            bottom: 7%;
+            cursor: pointer;
+        }
+
+        .notifecation{
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background-color: red;
+            border-radius: 50%;
+            top: -8%;
+            display: none;
+            padding: 4px 0;
+            text-align: center;
+            right: -20%;
+            position: absolute;
+        }
+
+        .bell-container{
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            padding: 0 9px;
+            border-top: 5px solid black;
+        }
+
+        .bell-icon{
+            font-size: 30px;
+            transform-origin: top center;
+        }
+
+        .bell-animation{
+            animation: bell-animation 1s linear;
+        }
+
+        @keyframes bell-animation {
+            0%{
+                transform: rotate(0deg);
+                color: gold;
+            }
+
+            20%{
+                transform: rotate(30deg);
+                color: gold;
+            }
+
+            40%{
+                transform: rotate(-30deg);
+                color: gold;
+            }
+
+            60%{
+                transform: rotate(30deg);
+                color: gold;
+            }
+            80%{
+                transform: rotate(-30deg);
+                color: gold;
+            }
+
+            100%{
+                transform: rotate(0deg);
+                color: black;
+            }
+        }
+
+</style>
+</head>
+    <body>
+
+    <div id="pop-up" class="pop">Pop up
+        <div id="notifecation" class="notifecation">
+            0
+        </div>
+    </div>
+    <div class="bell-container">
+        <i class="fa fa-bell bell-icon" id="bell-icon"></i>
+    </div>
+    <div id="chat-continer" style="display: none;" class="continer">
+        <div class="contacts">
+            <div class="contact-head">
+                <i class="fa fa-play contact-icon"></i>
+                <p>Your contacts</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="img-continer">
+                        <img src="../assets/img/10.png" alt="Loadding">
+                    </div>
+                    <div class="descripe">
+                        <p>Mohammed Khaled bin-Hazem</p>
+                        <p>see you tomorow</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-continer">
+                        <img src="../assets/img/1.jpg" alt="Loadding">
+                    </div>
+                    <div class="descripe">
+                        <p>Mohammed Khaled bin-Hazem</p>
+                        <p>see you tomorow</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-continer">
+                        <img src="../assets/img/11.png" alt="Loadding">
+                    </div>
+                    <div class="descripe">
+                        <p>Mohammed Khaled bin-Hazem</p>
+                        <p>see you tomorow</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-continer">
+                        <img src="../assets/img/12.png" alt="Loadding">
+                    </div>
+                    <div class="descripe">
+                        <p>Mohammed Khaled bin-Hazem</p>
+                        <p>see you tomorow</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-continer">
+                        <img src="../assets/img/ex12.jpg" alt="Loadding">
+                    </div>
+                    <div class="descripe">
+                        <p>Mohammed Khaled bin-Hazem</p>
+                        <p>see you tomorow</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="current-chat">
+            <div class="header">
+                <div class="imgContiner">
+                    <img src="../assets/img/ex12.jpg" >
+                </div>
+                <div class="name">
+                    <h3>Mohammed Khaled</h3>
+                    <p>online Now</p>
+                </div>
+            </div>
+            <div id="chat" class="chat">
+                <p class="date"> Monday AM 5:20</p>
+                <div class="black">
+                    <p>Lorem ipsum dolor sit amet, consectetur 😒</p>
+                </div>
+                <div class="white">
+                    <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum </p>
+                </div>
+                <div class="black">
+                    <p>Lorem ipsum 😊</p>
+                </div>
+                <div class="black">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum 😉 </p>
+                </div>
+                <div class="white">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                         Officia exercitationem enim accusantium provident, omnis 
+                         eius saepe. Atque libero non expedita neque! Esse</p>
+                </div>
+                <div class="white">
+                    <p>💓😒👍</p>
+                </div>
+                <!-- <p class="date"> Monday AM 5:20</p> -->
+                <div class="black">
+                    <p>Lorem ipsum dolor sit amet, consectetur 😒</p>
+                </div>
+                <div class="white">
+                    <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum </p>
+                </div>
+                <div class="black">
+                    <p>Lorem ipsum 😊</p>
+                </div>
+                <div class="black">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum 😉 </p>
+                </div>
+                <div class="white">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                         Officia exercitationem enim accusantium provident, omnis 
+                         eius saepe. Atque libero non expedita neque! Esse</p>
+                </div>
+                <div class="white">
+                    <p>💓😒👍</p>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="cam"><i class="fa fas fa-camera myIcon"></i></div>
+                <div class="face"><i class="fa far fa-smile-beam myIcon"></i></div>
+                <div class="inputfild"><input id="input-message" type="text" placeholder="type your message here" ></div>
+                <div id="btn-send" class="micke"><i class="fa-solid fa-share myIcon"></i></div>
+                <div class="micke"><i class="fa fas fa-microphone myIcon"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/links.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        //#region Sound
+        // Create an audio context
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        // Create an oscillator node
+        const oscillator = audioContext.createOscillator();
+
+        // Connect the oscillator to the audio context's destination (speakers)
+        oscillator.connect(audioContext.destination);
+
+        // Start the oscillator
+        oscillator.start();
+
+        // Stop the oscillator after 1 second
+        setTimeout(() => {
+        oscillator.stop();
+        }, 1000);
+
+                // Create an audio element
+        const audio = new Audio();
+
+        // Set the source of the audio file
+        audio.src = '../assets/audio/Crystal.mp3';
+        //#endregion
+
+        //#region pop-up
+        $('#pop-up').click(function(){
+            if($('#chat-continer').is(':hidden')){
+                $('#chat-continer').show(500);
+                $('#notifecation').hide();   
+                $('#bell-icon').removeClass('bell-animation'); 
+            }
+
+            else
+            $('#chat-continer').hide(500);
+        });
+        //#endregion
+
+        //#region Send maessage
+        $('#btn-send').click(function(){
+            if($('#input-message').val()!=""){
+                let newMessage = document.createElement('div');
+                newMessage.classList.add('black');
+                newMessage.innerHTML=`<p>${$('#input-message').val()}</p>`;
+                document.getElementById('chat').appendChild(newMessage);
+                setTimeout(() => {
+                    $('#chat-continer').hide(500); 
+                },700);
+                setTimeout(() =>{
+                    let newMessage2 = document.createElement('div');
+                    newMessage2.classList.add('white');
+                    newMessage2.innerHTML=`<p>${$('#input-message').val()}</p>`;
+                    document.getElementById('chat').appendChild(newMessage2);                
+                    $('#bell-icon').addClass('bell-animation'); 
+                    $('#notifecation').html(1); 
+                    audio.play();
+                    $('#input-message').val("");
+                    $('#notifecation').show();   
+                    }, 3000);  
+                }
+        })
+        //#endregion
+    });
+        
+    </script>
+
+</body>
+</html>

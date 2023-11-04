@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+
+    <link rel="stylesheet" href="../assets/lib/bootstrap.min.css?c=3">
+    <link rel="stylesheet" href="..//assets/lib/fontawesome-v6.4.2/css/all.css">
+    <link rel="stylesheet" href="../assets/css/links.css">
+
+    <title>WEATHER TEMPLATE</title>
+
+    <style>
+
+        body{
+            background-image: linear-gradient(to bottom right, #5567bb, #54d3aa);
+        }
+
+        .fg-color{
+            color: white;
+        }
+
+        .img-d{
+            width: 60%;
+            height: 60%;
+        }
+
+        .bg-color{
+            background-color: #5378af;
+        }
+
+        .border-r{
+            border-right: 1px solid white;
+        }
+
+        .custom-height{
+            height: 16rem;
+        }
+
+        .custom-height2{
+            height: 10rem;
+        }
+
+        .animation{
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .photo-appear{
+            animation: photo-appear 1s linear;
+        }
+
+        .report-appear{
+            animation: report-appear 1s linear;
+        }
+
+        .windy-status-appear{
+            animation: windy-status-appear 1s linear;
+        }
+
+        @keyframes photo-appear {
+            0%{
+                transform: scale(0.7);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        @keyframes report-appear {
+            0%{
+                transform: translateY(10%);
+                opacity: 0.5;
+                
+            }
+            100%{
+                transform: translateY(0%);
+            }
+        }
+
+        @keyframes windy-status-appear {
+            0%{
+                opacity: 0.3;
+                
+            }
+
+            50%{
+                opacity: 0.5;
+                
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container text-center fw-bold text-uppercase fg-color">
+        <div class="row mt-5 mb-5">
+            <h1 class="">wheather template</h1>
+        </div> 
+        <div class="row fwarp row-cols-1 row-cols-lg-2 row-gap-4 justify-content-center ">
+            <div class="col-12 col-md-9 col-lg-6">
+                <div class="container rounded bg-color pt-4 pb-4">
+                    <p >local weather report</p>
+                    <hr style="opacity: 1;">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="row justify-content-center align-items-center custom-height">
+                                <img id="first-day-img" class="img-fluid img-d day-img" alt="Loadding">
+                            </div>
+                            <div class="row gap-3 gap-sm-0 justify-content-center position-relative day-windy">
+                                <div class="col-2 pe-0"><i style="font-size: 35px;" class="fa-solid fa-hurricane animation"></i></div>
+                                <div class="col-5 pt-2 ps-0 "><p id="first-day-windy"></p></div>     
+                            </div>
+                        </div>
+                        <div class="col-5 custom-height2 day-report">
+                            <div class="row justify-content-center">
+                                <h1 id="first-day-name" class="mt-4"></h1>
+                                <h3 id="first-day-status"></h3>
+                            </div>
+                            <div style="margin-top: 5rem;" class="row justify-content-center">
+                                <h2 id="first-day-temp-c"></h2>
+                                <h2 id="first-day-temp-f"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-9 col-lg-6">
+                <div class="container rounded bg-color pt-4 pb-4">
+                    <p >local weather report</p>
+                    <hr style="opacity: 1;">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="row justify-content-center align-items-center custom-height">
+                                <img id="second-day-img" class="img-fluid img-d day-img" alt="Loadding">
+                            </div>
+                            <div class="row gap-3 gap-sm-0  justify-content-center position-relative day-windy">
+                                <div class="col-2 pe-0"><i style="font-size: 35px;" class="fa-solid fa-hurricane animation"></i></div>
+                                <div class="col-5 pt-2 ps-0 "><p id="second-day-windy"></p></div>     
+                            </div>
+                        </div>
+                        <div class="col-5 custom-height2 day-report">
+                            <div class="row justify-content-center">
+                                <h1 id="second-day-name" class="mt-4"></h1>
+                                <h3 id="second-day-status"></h3>
+                            </div>
+                            <div style="margin-top: 5rem;" class="row justify-content-center">
+                                <h2 id="second-day-temp-c"></h2>
+                                <h2 id="second-day-temp-f"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" container text-uppercase justify-content-center mt-4">
+            <div class="row row-cols-2 row-cols-md-3 justify-content-center row-cols-lg-5 row-gap-4 rounded bg-color pt-4 pb-4">
+                <div class="col">
+                    <div class="container border-r">
+                        <div class="row justify-content-center"><p id="third-day-name" class="mt-2"></p></div>
+                        <div class="row justify-content-center align-items-center custom-height"><img id="third-day-img" class="pt-3 pb-3 img-d" alt="Loadding"></div>
+                        <div class="row justify-content-center">
+                            <h5 id="third-day-temp-c"></h5>
+                            <h5 id="third-day-temp-f"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container border-r">
+                        <div class="row justify-content-center"><p id="fourth-day-name" class="mt-2"></p></div>
+                        <div class="row justify-content-center align-items-center custom-height"><img id="fourth-day-img" class="pt-3 pb-3 img-d" alt="Loadding"></div>
+                        <div class="row justify-content-center">
+                            <h5 id="fourth-day-temp-c"></h5>
+                            <h5 id="fourth-day-temp-f"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container border-r">
+                        <div class="row justify-content-center"><p id="fifth-day-name" class="mt-2"></p></div>
+                        <div class="row justify-content-center align-items-center custom-height"><img id="fifth-day-img" class="pt-3 pb-3 img-d" alt="Loadding"></div>
+                        <div class="row justify-content-center">
+                            <h5 id="fifth-day-temp-c"></h5>
+                            <h5 id="fifth-day-temp-f"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container border-r">
+                        <div class="row justify-content-center"><p id="sixth-day-name" class="mt-2"></p></div>
+                        <div class="row justify-content-center align-items-center custom-height"><img id="sixth-day-img" class="pt-3 pb-3 img-d" alt="Loadding"></div>
+                        <div class="row justify-content-center">
+                            <h5 id="sixth-day-temp-c"></h5>
+                            <h5 id="sixth-day-temp-f"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container">
+                        <div class="row justify-content-center"><p id="seventh-day-name" class="mt-2"></p></div>
+                        <div class="row justify-content-center align-items-center custom-height"><img id="seventh-day-img" class="pt-3 pb-3 img-d" alt="Loadding"></div>
+                        <div class="row justify-content-center">
+                            <h5 id="seventh-day-temp-c"></h5>
+                            <h5 id="seventh-day-temp-f"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 mb-4"><small class="fw-normal">by Mohammed Khaled bin-Hazim &copy; 2023</small></div>
+    </div>     
+
+    <script>
+
+        //#region Add Animation  
+
+        let imgs = document.querySelectorAll('.day-img');
+        let reports = document.querySelectorAll('.day-report');
+        let windy = document.querySelectorAll('.day-windy');
+        for(let i =0; i<imgs.length;i++){
+            imgs[i].classList.add('photo-appear');  
+            reports[i].classList.add('report-appear');
+            windy[i].classList.add('windy-status-appear');
+        }
+
+        //#endregion Add Animation  
+
+        //#region Set Weather 
+
+        let Days =['SATURDAY','SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY'];
+        let Statuses =shuffleArray(['SUNNY','SUNCLOUD','CLOUD','RAIN','RAINTHUNDER','SNOW','WINDYSNOW']);
+        let imgagesPath='../assets/img/';
+        let toText={0:'first',1:'second',2:'third',3:'fourth',4:'fifth',5:'sixth',6:'seventh'};
+        let date = new Date();
+        let options = {weekday:'long'}
+        let currentDay = date.toLocaleDateString('en-US',options).toUpperCase();
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        Days.forEach(function(day){
+            setReportAndImg(Days.indexOf(day));
+            if(currentDay == day){  
+                setDay(Days.indexOf(day));      
+            }         
+        })
+
+        function setDay(index){
+            document.getElementById('first-day-name').innerHTML=Days[index%7]
+            document.getElementById('second-day-name').innerHTML=Days[(index+1)%7]
+            document.getElementById('third-day-name').innerHTML=Days[(index+2)%7]
+            document.getElementById('fourth-day-name').innerHTML=Days[(index+3)%7]
+            document.getElementById('fifth-day-name').innerHTML=Days[(index+4)%7]
+            document.getElementById('sixth-day-name').innerHTML=Days[(index+5)%7]
+            document.getElementById('seventh-day-name').innerHTML=Days[(index+6)%7]
+        }
+
+        function setReportAndImg(index){
+            if(Statuses[index]=='SUNNY'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'sun.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='25°C';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='77°F';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='10   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='SUNCLOUD'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'SunCloud.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='20ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='68ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='15   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='CLOUD'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'Cloud.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='15ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='59ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='20   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='RAIN'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'rain.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='12ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='53.6ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='35   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='RAINTHUNDER'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'RainThunder.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='18ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='64.4ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='40   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='WINDYSNOW'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'windySnow.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='10ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='50ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='30   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+            else if(Statuses[index]=='SNOW'){
+                document.getElementById(`${toText[index]}-day-img`).src=imgagesPath+'Snow.png';
+                document.getElementById(`${toText[index]}-day-temp-c`).innerHTML='-5ºC';
+                document.getElementById(`${toText[index]}-day-temp-f`).innerHTML='23ºF';
+                if(index<2){
+                    document.getElementById(`${toText[index]}-day-windy`).innerHTML='25   km/h  sw';
+                    document.getElementById(`${toText[index]}-day-status`).innerHTML=Statuses[index];
+                }
+            }
+        }
+
+        //#endregion Set Weather  
+    </script>
+    <script src="../assets/js/links.js"></script>
+</body>
+</html>
