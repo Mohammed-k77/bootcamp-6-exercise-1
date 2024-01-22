@@ -1,1 +1,1 @@
-# bootcamp-6-exercise-1
+# front-end_exercises
